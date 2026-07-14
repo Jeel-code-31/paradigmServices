@@ -95,7 +95,7 @@ export default function Navbar() {
           {/* Left: Logo */}
           <Link href="/" className="inline-block transition-opacity hover:opacity-90 shrink-0">
             <Image
-              src="/logo.png"
+              src="/Logo.png"
               alt="Paradigm Logo"
               width={isScrolled ? 130 : 150}
               height={50}
