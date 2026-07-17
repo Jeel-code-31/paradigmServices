@@ -50,7 +50,7 @@ export default function Slider() {
   }, []);
 
   return (
-    <section className="py-24 relative overflow-hidden bg-[#BAC291]" id="projects">
+    <section className="py-24 relative overflow-hidden bg-white" id="projects">
       {/* Background Decorative Element */}
       <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-[#1A3013] blur-[120px]" />

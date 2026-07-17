@@ -95,8 +95,8 @@ export default function Footer() {
           <h3 className="text-xl font-bold text-[#1a1a1a] mb-6 pb-2 border-b-2 border-gray-400 inline-block w-fit">Subscribe</h3>
           <p className="text-[#555555] mb-4 text-sm md:text-base">Stay updated with our latest insights and news.</p>
           <form className="flex w-full mb-8 max-w-md" onSubmit={(e) => e.preventDefault()}>
-            <input type="email" placeholder="Your email address" className="flex-1 min-w-0 p-2 md:p-3 border border-gray-300 rounded-l focus:outline-none focus:ring-1 focus:ring-green-800 text-sm md:text-base" required />
-            <button type="submit" className="bg-[#444444] text-white px-3 md:px-5 py-2 md:py-3 border-none rounded-r cursor-pointer hover:bg-black transition-colors font-semibold whitespace-nowrap text-sm md:text-base">Subscribe</button>
+            <input type="email" placeholder="Your email address" className="flex-1 min-w-0 p-2 md:p-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-1 focus:ring-green-800 text-sm md:text-base" required />
+            <button type="submit" className="text-black px-3 md:px-5 py-2 md:py-3 border border-black/50 rounded-2xl cursor-pointer transition-colors font-semibold whitespace-nowrap text-sm md:text-base">Subscribe</button>
           </form>
 
           <h3 className="text-xl font-bold text-[#1a1a1a] mb-4 lg:pt-4">Follow Us</h3>
@@ -112,7 +112,7 @@ export default function Footer() {
       {/* Footer Bottom */}
       <div className="w-full h-0.5 bg-[#1A3013] mx-auto rounded-full" />
       <div className="bg-green text-center p-6 mt-8">
-        <p className="m-0 text-xs md:text-sm font-medium text-[#555555]">2023 Paradigm Service PVT.LTD | All Rights Reserved</p>
+        <p className="m-0 text-xs md:text-sm font-medium text-[#555555]"> &copy; 2026 Paradigm Service PVT.LTD | All Rights Reserved</p>
       </div>
     </footer>
   );

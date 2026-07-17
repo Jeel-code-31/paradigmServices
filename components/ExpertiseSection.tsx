@@ -21,14 +21,14 @@ function ExpertiseCard({ item, variants }: { item: any, variants: any }) {
           loading="lazy"
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
         />
-        <div className="absolute inset-0 bg-[#1A3013]/10 group-hover:bg-transparent transition-colors duration-500" />
+        <div className="absolute inset-0 bg-white/0 group-hover:bg-transparent transition-colors duration-500" />
       </div>
       <div className="p-8 flex flex-col flex-grow">
         <div className="flex justify-between items-center mb-4">
-          <h3 className="text-xl font-bold text-[#1A3013] group-hover:text-green-750 transition-colors font-black uppercase tracking-tight">
+          <h3 className="text-xl font-bold text-black group-hover:text-black transition-colors font-black uppercase tracking-tight">
             {item.title}
           </h3>
-          <span className="text-xs font-mono font-bold text-green-800 bg-[#E3E9D3] px-2 py-0.5 rounded">
+          <span className="text-xs font-mono font-bold text-black bg-gray-100 px-2 py-0.5 rounded">
             {isExpanded ? "Collapse" : "Expand"}
           </span>
         </div>
@@ -90,13 +90,13 @@ export default function ExpertiseSection() {
   };
 
   return (
-    <section className="bg-[#E3E9D3] py-24 px-4 md:px-6 border-b border-black/5">
+    <section className="bg-white py-24 px-4 md:px-6 border-b border-black/5">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 text-center md:text-left">
-          <span className="text-xs font-mono font-bold tracking-[0.25em] text-[#1A3013] uppercase block mb-3">
+          <span className="text-xs font-mono font-bold tracking-[0.25em] text-black uppercase block mb-3">
             Capabilities
           </span>
-          <h2 className="text-4xl md:text-6xl font-black text-[#1A3013] mb-6 tracking-tighter font-black uppercase">
+          <h2 className="text-4xl md:text-6xl font-black text-black mb-6 tracking-tighter font-black uppercase">
             Our Expertise
           </h2>
           <p className="text-lg md:text-2xl leading-relaxed text-gray-700 font-afaca max-w-4xl">

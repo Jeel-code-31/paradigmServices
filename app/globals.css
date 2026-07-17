@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600;700&family=EB+Garamond:wght@400;700&family=Lumanosimo&family=JetBrains+Mono:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,7 +6,14 @@
 
 @layer base {
   body {
-    @apply font-afaca bg-white text-[#333333] leading-relaxed m-0 p-0;
+    font-family: 'Montserrat', sans-serif;
+    background: white;
+    color: #333333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1,
@@ -15,7 +22,10 @@
   h4,
   h5,
   h6 {
-    @apply font-black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -0.02em;
   }
 
   /* Specific style for numbers */
@@ -36,7 +46,7 @@
   }
 
   .tech-font {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
   }
 
   .glass-panel {

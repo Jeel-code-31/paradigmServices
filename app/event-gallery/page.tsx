@@ -285,14 +285,14 @@ export default function EventGallery() {
   };
 
   return (
-    <main className="min-h-screen bg-[#FDFDFD] selection:bg-[#BAC291]">
+    <main className="min-h-screen bg-white selection:bg-gray-300">
       
       {/* MINIMALIST HEADER */}
       <section className="pt-24 pb-16 px-6 text-center">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="inline-block px-4 py-1 rounded-full border border-[#BAC291] text-[#1A3013] text-xs font-bold uppercase tracking-widest mb-6"
+          className="inline-block px-4 py-1 rounded-full border border-gray-200 text-black text-xs font-bold uppercase tracking-widest mb-6"
         >
           Our Moments
         </motion.div>
@@ -300,7 +300,7 @@ export default function EventGallery() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="text-5xl md:text-6xl font-black text-[#1A3013] mb-4"
+            className="text-5xl md:text-6xl font-black text-black mb-4"
         >
           Event Gallery
         </motion.h1>
@@ -324,8 +324,8 @@ export default function EventGallery() {
                 onClick={() => setActiveGallery({ event, index: 0 })}
               >
                 <img src={event.images[0].src} loading="lazy" decoding="async" className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110" alt="" />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all" />
-                <Maximize2 className="absolute top-6 right-6 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all" />
+                <Maximize2 className="absolute top-6 right-6 text-black opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
               {event.images.slice(1, 3).map((img, i) => (
                 <div 
@@ -342,14 +342,14 @@ export default function EventGallery() {
             {/* TEXT SIDE */}
             <div className="w-full lg:w-2/5 space-y-6">
               <div className="space-y-2">
-                <h2 className="text-3xl md:text-4xl font-black text-[#1A3013] leading-tight">{event.title}</h2>
+                <h2 className="text-3xl md:text-4xl font-black text-black leading-tight">{event.title}</h2>
               </div>
               <button 
                 onClick={() => setActiveGallery({ event, index: 0 })}
-                className="flex items-center mt-20 gap-4 text-[#1A3013] font-bold group"
+                className="flex items-center mt-20 gap-4 text-black font-bold group"
               >
                 Open Image Full Screen
-                <span className="w-10 h-[2px] bg-[#BAC291] transition-all group-hover:w-16" />
+                <span className="w-10 h-[2px] bg-gray-200 transition-all group-hover:w-16" />
               </button>
             </div>
           </motion.div>
@@ -363,13 +363,13 @@ export default function EventGallery() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-[#1A3013] flex flex-col items-center justify-center p-6"
+            className="fixed inset-0 z-[100] bg-black/40 flex flex-col items-center justify-center p-6"
           >
             {/* Close Button */}
-            <button 
-              onClick={() => setActiveGallery(null)}
-              className="absolute top-8 right-8 text-white/50 hover:text-white transition-colors"
-            >
+              <button 
+                onClick={() => setActiveGallery(null)}
+                className="absolute top-8 right-8 text-black/50 hover:text-black transition-colors"
+              >
               <X size={40} strokeWidth={1} />
             </button>
 

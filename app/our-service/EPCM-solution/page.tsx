@@ -7,7 +7,7 @@ import {
   ChevronRight, X, Zap, Target,
   TrendingUp, GraduationCap, ClipboardCheck,
   Plus, ArrowRight, Award, Globe, Scale,
-  BookOpen, Landmark, Cpu
+  BookOpen, Landmark, Building2, Cog, Wind, Cpu, Construction
 } from "lucide-react";
 import Link from "next/link";
 
@@ -16,7 +16,7 @@ interface Service {
   title: string;
   subtitle: string;
   shortDesc: string;
-  fullDesc: React.ReactNode;
+  fullDesc: string;
   icon: React.ReactNode;
   img: string;
   highlights: string[];
@@ -26,54 +26,121 @@ interface Service {
 
 const services: Service[] = [
   {
-    id: "Lean",
-    title: "Process Streamlining",
-    subtitle: "",
-    shortDesc: "Process is very imp phase after complete the assessment of the organization. In this phase we work on the process to make it more efficient and effective.",
-    fullDesc: (
-      <>
-        .Process Optimization for - Line Wise profitablility, Cost And Material Controls.
-        <br /><br />
-        .Building Controls for - Process Simplification, Standardization
-        <br /><br />
-        .Process Management for - Organization Sturcture driven by KPI,Develop and Sustain Measurement and Monitoring Systems.
-        <br /><br />
-        .Develop and sustain key process Control Factors like Management Information System (MIS) For operational Efficiency and cost Saving.
-        <br /><br />
-        .Commercial Comprasion & Recommendation.
-      </>
-    ),
-    icon: <Landmark className="w-12 h-12" />,
+    id: "architecture",
+    title: "•	Industrial architecture & structural engineering",
+    subtitle: "Architectural & Structural Drafting",
+    shortDesc: "Detailed architectural plans and structural design for industrial facilities.",
+    fullDesc: "We provide comprehensive industrial architecture and civil-structural engineering services. Our team creates optimized layouts, performs structural analysis, and prepares complete civil construction drawings to ensure safety, functionality, and compliance with local regulations.",
+    icon: <Building2 className="w-12 h-12" />,
     img: "https://images.unsplash.com/photo-1521791136064-7986c2959d43?auto=format&fit=crop&q=80&w=1200",
-    highlights: ["Preparation of FSMS plans and recall and traceablity plans", "Alignement with properietary food definitions", "Labelling,Packaging and legal metrology", "Preparation of Representations to FSSAI"],
+    highlights: [
+      "Space utilization & GMP zoning",
+      "Structural load and foundation analysis",
+      "Detailed civil construction drawings",
+      "Architectural plans, sections, and elevations"
+    ],
     color: "#BAC291"
   },
   {
-    id: "Manufacture",
-    title: "World Class Manufacturing (WCM)",
-    subtitle: "5S, Kaizen & zero-defect initiatives",
-    shortDesc: "World Class Manufacturing (WCM) is a philosophy that focuses on continuous improvement in all aspects of manufacturing. It is a holistic approach that involves the entire organization, from top management to front-line employees, in the pursuit of excellence.",
-    fullDesc: "our Experience working with Automobile, IT Sectors, Telll us that food processing industry requires a culture change. We have amalgamentd the tools to crease unique approches for various segments of factories to get desired the outcomes as we know.",
-    icon: <Globe className="w-12 h-12" />,
+    id: "process",
+    title: "•	Process engineering & automation",
+    subtitle: "Process Design & Optimization",
+    shortDesc: "Process flow sheets, equipment sizing, and pipeline layout design.",
+    fullDesc: "Our process engineering services cover the creation of Process Flow Diagrams (PFDs), Equipment Layouts, and detailed Piping & Instrumentation Diagrams (P&IDs). We calculate precise sizing requirements for process machinery and utilities to ensure high performance and safety.",
+    icon: <Cog className="w-12 h-12" />,
     img: "https://images.unsplash.com/photo-1526304640581-d4a8ef0b3296?auto=format&fit=crop&q=80&w=1200",
-    highlights: ["Foregin supplier Verification programme", "PCQI(Preventive Control Qualified Individual) Training", "TACCP(Threat assessment and critical control point)", "Infrastructure Zoning"],
+    highlights: [
+      "Process Flow Diagrams (PFDs) design",
+      "Piping & Instrumentation Diagrams (P&IDs)",
+      "Equipment layout and capacity planning",
+      "Process pipeline sizing and validation"
+    ],
     color: "#BAC291"
   },
   {
-    id: "lean-6",
-    title: "Lean manufacturing & Six Sigma",
-    subtitle: ".",
-    shortDesc: "World Class Manufacturing (WCM) is a philosophy that focuses on continuous improvement in all aspects of manufacturing. It is a holistic approach that involves the entire organization, from top management to front-line employees, in the pursuit of excellence.",
-    fullDesc: "In Lean six Sigma Approch, We do solve focused problem by graduating people to challenge organization problems and create continous improvment culture following are the outcomes",
-    icon: <Globe className="w-12 h-12" />,
+    id: "utilities",
+    title: "Utilities, MEP, HVAC, clean utilities & fire safety systems",
+    subtitle: "Mechanical, Electrical, Piping & HVAC",
+    shortDesc: "Clean utility design, MEP routing, HVAC systems, and loss prevention.",
+    fullDesc: "We design robust utility and mechanical, electrical, and plumbing (MEP) systems, including cleanrooms, HVAC systems, water/steam distribution, electrical cabling, substations, and comprehensive fire safety hydrant systems tailored for industrial settings.",
+    icon: <Wind className="w-12 h-12" />,
     img: "https://images.unsplash.com/photo-1526304640581-d4a8ef0b3296?auto=format&fit=crop&q=80&w=1200",
-    highlights: ["Foregin supplier Verification programme", "PCQI(Preventive Control Qualified Individual) Training", "TACCP(Threat assessment and critical control point)", "Infrastructure Zoning"],
+    highlights: [
+      "Cleanroom HVAC and air classification design",
+      "Utilities routing (water, steam, compressed air)",
+      "Fire safety & sprinkler system layouts",
+      "Electrical substation sizing & cabling networks"
+    ],
     color: "#BAC291"
   },
+  {
+    id: "automation",
+    title: "Automation & digital integration",
+    subtitle: "Digital Integration & Controls",
+    shortDesc: "PLC, SCADA, DCS configuration, instrumentation, and control loops.",
+    fullDesc: "We offer automation engineering to bring intelligence and real-time control to your factory. From selecting field instruments to programming PLCs and SCADA networks, we ensure seamless data integration and control loop implementation for optimal operations.",
+    icon: <Cpu className="w-12 h-12" />,
+    img: "https://images.unsplash.com/photo-1526304640581-d4a8ef0b3296?auto=format&fit=crop&q=80&w=1200",
+    highlights: [
+      "Instrument specifications & I/O lists",
+      "SCADA, PLC, and DCS integration",
+      "Cable schedule & loop schematic drafting",
+      "Smart monitoring & data logging systems"
+    ],
+    color: "#BAC291"
+  },
+  {
+    id: "epcm",
+    title: "EPCM & turnkey project execution",
+    subtitle: "Engineering, Procurement & Construction Management",
+    shortDesc: "Complete lifecycle management from concept design to commercial run.",
+    fullDesc: "Our EPCM team coordinates all phases of greenfield and brownfield projects, managing engineering design, equipment procurement, vendor selection, project scheduling, and on-site execution to deliver facilities on time and within budget.",
+    icon: <Construction className="w-12 h-12" />,
+    img: "https://images.unsplash.com/photo-1526304640581-d4a8ef0b3296?auto=format&fit=crop&q=80&w=1200",
+    highlights: [
+      "Turnkey execution oversight",
+      "Master project scheduling & CPM tracking",
+      "Equipment procurement & vendor audits",
+      "Quality and safety assurance controls"
+    ],
+    color: "#BAC291"
+  },
+  {
+    id: "pmc",
+    title: "Project Management Consultancy (PMC)",
+    subtitle: "PMC Services",
+    shortDesc: "Supervision, budgeting, bill certification, and timeline monitoring.",
+    fullDesc: "We act as independent project managers to protect our client's interests. We oversee contractors, verify progress billings, run site status meetings, resolve engineering clashes, and ensure that construction strictly follows quality guidelines.",
+    icon: <Target className="w-12 h-12" />,
+    img: "https://images.unsplash.com/photo-1526304640581-d4a8ef0b3296?auto=format&fit=crop&q=80&w=1200",
+    highlights: [
+      "Contractor coordination & site scheduling",
+      "Progress bill verification & auditing",
+      "Site safety management & QA reviews",
+      "Conflict resolution and delay mitigation"
+    ],
+    color: "#BAC291"
+  },
+  {
+    id: "commissioning",
+    title: "Commissioning support",
+    subtitle: "Pre-commissioning, Dry runs & Wet runs",
+    shortDesc: "Trial runs, safety interlock checks, and operational handholding.",
+    fullDesc: "We provide on-site commissioning support to transition the facility to commercial operations. We manage equipment trials, run dry and wet tests, configure safety interlocks, train factory staff, and deliver standard operating procedures (SOPs).",
+    icon: <ClipboardCheck className="w-12 h-12" />,
+    img: "https://images.unsplash.com/photo-1526304640581-d4a8ef0b3296?auto=format&fit=crop&q=80&w=1200",
+    highlights: [
+      "Pre-commissioning dry & wet trial runs",
+      "Safety interlocks & emergency shutdown checks",
+      "Operator training & SOP handoff documentation",
+      "Transition to daily commercial manufacturing"
+    ],
+    color: "#BAC291"
+  }
 ];
 
 
-export default function OperationalExcellence() {
+export default function RegularAdvisory() {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -98,7 +165,7 @@ export default function OperationalExcellence() {
   }, [selectedService]);
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-paradigm-bg selection:bg-[#1A3013] selection:text-white pt-2 font-afaca overflow-x-hidden">
+    <div ref={containerRef} className="min-h-screen bg-paradigm-bg selection:bg-[#1A3013] selection:text-white pt-24 font-afaca overflow-x-hidden">
 
 
       <main className="max-w-[1440px] mx-auto px-6 lg:px-16 relative">
@@ -108,23 +175,14 @@ export default function OperationalExcellence() {
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="space-y-4 relative z-10">
 
             <h1 className="text-xl md:text-5xl font-black text-[#1A3013] uppercase leading-[0.8] tracking-tighter font-black">
-              Operational Excellence<br />– productivity improvement
+              Factory Design<br /> & EPCM Solutions
             </h1>
           </motion.div>
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="max-w-auto text-xl md:text-2xl text-gray-600 leading-relaxed font-afaca relative">
-          Operational Excellence (OpEx) focuses on improving the work culture by aligning people to customer requirements to sustain in the current competition. This leads to elimination of wastes, improvement of yield, better planning and controls, leading to reduced operational cost, better work culture and customer satisfaction,
-
-<br />At Paradigm we guide, train and enable enterprises to develop internal operational experts for sustenance of continuous improvement culture.
-    <br/>
-    
-We help organizations improve operational efficiency, quality, and profitability through structured improvement programs and smart solutions, including:
-  - World Class Manufacturing (WCM) - 5S, Kaizen & Zero Defect Initiatives
-  - Lean Manufacturing & Six Sigma
-  - Yield Improvement & Waste Reduction
-  - ERP, IoT & AI-enabled Operational Systems
-  - End-to-End Supply Chain Optimization
-
- </motion.p>
+          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="max-w-auto text-xl md:text-2xl text-gray-600 mt-24   md:mt-16 leading-relaxed font-afaca relative">
+            We provide end-to-end EPCM (Engineering, Procurement & Construction Management) services for greenfield, brownfield and expansion projects. Our multidisciplinary teams take facilities from concept to commissioning—delivering projects on time, within budget and to global engineering, quality and safety standards.
+            <br />
+            Our engineering capabilities are further strengthened through our sister concern, Zen Consultech Pvt. Ltd. (Zen Group), which extends our in-house team with experienced architects and engineering professionals. Together, we deliver fully integrated multidisciplinary engineering—from architecture and civil-structural design through MEP, HVAC and fire safety—providing coordinated engineering, faster execution and a single point of responsibility across greenfield developments, brownfield expansions and manufacturing modernisation projects.
+          </motion.p>
         </section>
 
         {/* STAGGERED VERTICAL TRACK */}

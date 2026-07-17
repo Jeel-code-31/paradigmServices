@@ -70,6 +70,54 @@ const services: Service[] = [
     highlights: ["Foregin supplier Verification programme", "PCQI(Preventive Control Qualified Individual) Training", "TACCP(Threat assessment and critical control point)", "Infrastructure Zoning"],
     color: "#BAC291"
   },
+  {
+    id: "yield-improvement",
+    title: "Yield improvement, waste reduction & cost optimisation",
+    subtitle: "Material & Cost Optimization",
+    shortDesc: "Maximizing material efficiency, reducing waste, and streamlining operational costs.",
+    fullDesc: "We implement advanced yield management strategies and structured waste elimination audits. Our specialists identify raw material loss points, optimize resource usage, and establish cost monitoring systems to directly improve bottom-line margins.",
+    icon: <TrendingUp className="w-12 h-12" />,
+    img: "https://images.unsplash.com/photo-1526304640581-d4a8ef0b3296?auto=format&fit=crop&q=80&w=1200",
+    highlights: [
+      "Raw material yield optimization",
+      "Structured waste (Muda) elimination",
+      "Utility and resource cost audits",
+      "Process margin improvements"
+    ],
+    color: "#BAC291"
+  },
+  {
+    id: "digital-factory",
+    title: "Digital factory solutions – ERP, IoT & AI-enabled operations",
+    subtitle: "Smart Manufacturing & Industry 4.0",
+    shortDesc: "Integrating IoT, ERP interfaces, and AI-enabled diagnostics for real-time operations.",
+    fullDesc: "We guide factories through digital transformation. By integrating ERP databases with shop-floor IoT sensors, building real-time dashboards, and deploying AI diagnostics, we enable predictive maintenance and data-driven decision-making.",
+    icon: <Cpu className="w-12 h-12" />,
+    img: "https://images.unsplash.com/photo-1526304640581-d4a8ef0b3296?auto=format&fit=crop&q=80&w=1200",
+    highlights: [
+      "Real-time operational dashboards",
+      "ERP and shop floor database bridging",
+      "IoT sensors & predictive diagnostics",
+      "AI-driven manufacturing analytics"
+    ],
+    color: "#BAC291"
+  },
+  {
+    id: "supply-chain",
+    title: "End-to-end supply chain optimisation",
+    subtitle: "Logistics & Supply Chain Management",
+    shortDesc: "Optimizing inventory levels, supplier reliability, and logistics networks.",
+    fullDesc: "We analyze and optimize supply chains from raw materials to customer delivery. Our services include inventory control modeling, warehouse space planning, logistics network optimization, and vendor performance audits to ensure maximum reliability and lower holding costs.",
+    icon: <Globe className="w-12 h-12" />,
+    img: "https://images.unsplash.com/photo-1526304640581-d4a8ef0b3296?auto=format&fit=crop&q=80&w=1200",
+    highlights: [
+      "Inventory optimization & safety stock modeling",
+      "Warehouse layout & space optimization",
+      "Logistics and transit routing audits",
+      "Vendor performance & risk evaluations"
+    ],
+    color: "#BAC291"
+  }
 ];
 
 
@@ -108,23 +156,13 @@ export default function OperationalExcellence() {
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="space-y-4 relative z-10">
 
             <h1 className="text-xl md:text-5xl font-black text-[#1A3013] uppercase leading-[0.8] tracking-tighter font-black">
-              Operational Excellence<br />– productivity improvement
+              Operational Excellence<br />& Smart Manufacturing
             </h1>
           </motion.div>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="max-w-auto text-xl md:text-2xl text-gray-600 leading-relaxed font-afaca relative">
-          Operational Excellence (OpEx) focuses on improving the work culture by aligning people to customer requirements to sustain in the current competition. This leads to elimination of wastes, improvement of yield, better planning and controls, leading to reduced operational cost, better work culture and customer satisfaction,
-
-<br />At Paradigm we guide, train and enable enterprises to develop internal operational experts for sustenance of continuous improvement culture.
-    <br/>
-    
-We help organizations improve operational efficiency, quality, and profitability through structured improvement programs and smart solutions, including:
-  - World Class Manufacturing (WCM) - 5S, Kaizen & Zero Defect Initiatives
-  - Lean Manufacturing & Six Sigma
-  - Yield Improvement & Waste Reduction
-  - ERP, IoT & AI-enabled Operational Systems
-  - End-to-End Supply Chain Optimization
-
- </motion.p>
+            We improve operational performance through structured excellence programmes, lean manufacturing practices and digital transformation initiatives. Our objective is to enhance productivity, quality and profitability while building sustainable systems that enable continuous improvement<br />
+            Our operational excellence practice is delivered through our sister concern, Paradigm Excellence Services LLP, a dedicated team of lean, quality and digital manufacturing specialists. We go beyond recommendations by working alongside clients to implement practical improvements, develop organisational capabilities and create a culture of continuous improvement that delivers measurable, long-term business results.
+          </motion.p>
         </section>
 
         {/* STAGGERED VERTICAL TRACK */}

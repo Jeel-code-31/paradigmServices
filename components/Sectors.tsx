@@ -110,9 +110,8 @@ export default function Sectors() {
               whileHover={{ 
                 y: -10,
                 backgroundColor: "rgba(255, 255, 255, 0.8)",
-                boxShadow: "0 20px 40px rgba(26, 48, 19, 0.1)"
               }}
-              className={`p-8 rounded-[2.5rem] bg-white/40 backdrop-blur-sm border border-[#1A3013]/5 transition-all duration-300 flex flex-col h-full group ${
+              className={`p-8 rounded-[2.5rem] bg-white/40 backdrop-blur-sm border border-black/50 transition-all duration-300 flex flex-col h-full group ${
                 index === 0 ? "md:col-span-2 lg:col-span-1" : ""
               }`}
             >
@@ -123,7 +122,7 @@ export default function Sectors() {
                 <div className="h-[1px] flex-grow bg-gradient-to-r from-transparent via-[#1A3013]/10 to-transparent mx-4 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </div>
               
-              <h3 className="text-2xl font-black text-[#1A3013] mb-6 font-black uppercase tracking-tight">
+              <h3 className="text-xl font-black text-[#1A3013] mb-6 font-black uppercase tracking-tight">
                 {sector.title}
               </h3>
               

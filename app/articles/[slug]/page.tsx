@@ -20,12 +20,12 @@ export default async function ArticleDetailPage({ params }: Props) {
   }
 
   return (
-    <main className="min-h-screen bg-[#F9FAF7]">
-      <section className="bg-[#BAC291] py-20">
-        <div className="max-w-5xl mx-auto px-6 text-[#1A3013]">
-          <p className="text-sm uppercase tracking-[0.35em] text-[#1A3013]/70 mb-4">{article.category}</p>
+    <main className="min-h-screen bg-white">
+      <section className="bg-white py-20">
+        <div className="max-w-5xl mx-auto px-6 text-black">
+          <p className="text-sm uppercase tracking-[0.35em] text-black/70 mb-4">{article.category}</p>
           <h1 className="text-4xl md:text-5xl font-black leading-tight mb-6">{article.title}</h1>
-          <div className="flex flex-col gap-3 text-sm md:text-base text-[#1A3013]/80">
+          <div className="flex flex-col gap-3 text-sm md:text-base text-black/80">
             <span>{article.date}</span>
           </div>
         </div>

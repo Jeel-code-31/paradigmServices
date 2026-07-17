@@ -51,15 +51,15 @@ export default function VisionMissionValues() {
   ];
 
   return (
-    <section className="bg-[#E3E9D3] py-24 px-4 sm:px-6 md:px-12 relative overflow-hidden border-b border-black/5">
+    <section className="bg-white py-24 px-4 sm:px-6 md:px-12 relative overflow-hidden border-b border-black/5">
       {/* Decorative background shapes */}
-      <div className="absolute top-1/2 left-[-10%] w-[400px] h-[400px] bg-[#BAC291]/30 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 left-[-10%] w-[400px] h-[400px] bg-gray-100/30 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-white/40 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
 
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -69,35 +69,35 @@ export default function VisionMissionValues() {
             <span className="text-xs font-mono font-bold tracking-[0.25em] text-[#1A3013] uppercase block mb-3">
               Who We Are
             </span>
-            <h2 className="text-4xl md:text-6xl font-black text-[#1A3013] tracking-tighter uppercase font-black">
+            <h2 className="text-4xl md:text-6xl font-black text-black tracking-tighter uppercase font-black">
               Vision, Mission & Values
             </h2>
-            <div className="w-24 h-1.5 bg-[#1A3013] mx-auto mt-4 rounded-full" />
+            <div className="w-24 h-1.5 bg-black mx-auto mt-4 rounded-full" />
           </motion.div>
         </div>
 
         {/* Vision & Mission Side-by-Side Panel */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-28">
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div className="space-y-6">
               <span className="text-xs font-mono font-bold tracking-widest text-[#1A3013]/60 uppercase block">
                 Foundations
               </span>
-              <h3 className="text-3xl md:text-4xl font-black text-[#1A3013] uppercase tracking-tight font-black leading-none">
+              <h3 className="text-xl md:text-2xl font-black text-[#1A3013] uppercase tracking-tight font-black leading-none">
                 Transforming the Manufacturing Landscape
               </h3>
               <p className="text-gray-700 font-afaca text-base md:text-lg leading-relaxed">
-                Helping organization Design, Build, Improvement and sustain World-class manufacturing Facilities.
+                Helping organizations design, build, improve, and sustain world-class manufacturing facilities.
               </p>
             </div>
 
             {/* Toggle Switches */}
-            <div className="flex bg-[#BAC291]/30 p-1.5 rounded-xl border border-black/5 mt-8 max-w-[280px]">
+            <div className="flex bg-gray-50 p-1.5 rounded-xl border-2 border-green/20 mt-8 max-w-[280px]">
               <button
                 onClick={() => setActiveTab("vision")}
                 className={`flex-1 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-300 flex items-center justify-center space-x-2 ${activeTab === "vision"
-                    ? "bg-[#1A3013] text-[#E3E9D3] shadow"
-                    : "text-[#1A3013] hover:bg-black/5"
+                    ? "bg-black text-white shadow-lg"
+                    : "text-black hover:bg-black/5"
                   }`}
               >
                 <Eye className="w-4 h-4" />
@@ -106,8 +106,8 @@ export default function VisionMissionValues() {
               <button
                 onClick={() => setActiveTab("mission")}
                 className={`flex-1 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-300 flex items-center justify-center space-x-2 ${activeTab === "mission"
-                    ? "bg-[#1A3013] text-[#E3E9D3] shadow"
-                    : "text-[#1A3013] hover:bg-black/5"
+                    ? "bg-black text-white shadow-lg"
+                    : "text-black hover:bg-black/5"
                   }`}
               >
                 <Target className="w-4 h-4" />
@@ -117,7 +117,7 @@ export default function VisionMissionValues() {
           </div>
 
           <div className="lg:col-span-7">
-            <div className="bg-white/80 backdrop-blur-md p-8 md:p-12 rounded-[2rem] border border-white/20 shadow-xl min-h-[350px] flex flex-col justify-center">
+            <div className="bg-white backdrop-blur-md p-8 md:p-12 rounded-[2rem] border-2 border-black/50  min-h-[350px] flex flex-col justify-center relative overflow-hidden group hover:border-black transition-colors duration-500">
               {activeTab === "vision" ? (
                 <motion.div
                   key="vision"
@@ -155,8 +155,8 @@ export default function VisionMissionValues() {
                   <p className="text-gray-600 font-afaca text-base md:text-lg leading-relaxed pt-2">
                     Through integrated engineering, technology, food safety, regulatory, legal and operational excellence solutions.
                   </p>
-                  <p className="text-gray-500 font-afaca text-sm md:text-base italic pt-2 border-t border-gray-100">
-                    By combining multidisciplinary expertise with practical execution, we deliver measurable improvements in quality, compliance, productivity and business performance across the entire manufacturing lifecycle- from concept and strategy through engineering, Commissioning and Continous improvement.
+                  <p className="text-gray-500 font-afaca text-sm md:text-base italic pt-2 border-t-2 border-black/5">
+                    By combining multidisciplinary expertise with practical execution, we deliver measurable improvements in quality, compliance, productivity and business performance across the entire manufacturing lifecycle — from concept and strategy through engineering, commissioning, and continuous improvement.
                   </p>
                 </motion.div>
               )}
@@ -165,11 +165,12 @@ export default function VisionMissionValues() {
         </div>
 
         {/* Our Values Grid */}
-        <div className="mb-24">
-          <div className="text-center md:text-left mb-10">
+        <div className="mb-28">
+          <div className="text-center md:text-left mb-12">
             <h3 className="text-2xl md:text-3xl font-black text-[#1A3013] uppercase tracking-tight font-black">
               Our Core Values
             </h3>
+            <div className="w-16 h-1 bg-black/20 mt-2 rounded-full hidden md:block" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -183,16 +184,16 @@ export default function VisionMissionValues() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   whileHover={{ y: -6 }}
-                  className="bg-white/60  rounded-2xl p-8 border border-[#BAC291] hover:border-[#BAC291] transition-all duration-500 group flex flex-col justify-between cursor-default"
+                  className="bg-white rounded-2xl p-8 border-2 border-black/50 hover:border-black transition-all duration-500 group flex flex-col justify-between cursor-default  hover:shadow-md"
                 >
                   <div>
-                    <div className="w-12 h-12 rounded-xl bg-[#BAC291]/30 group-hover:bg-[#BAC291] flex items-center justify-center mb-6 transition-all duration-300">
-                      <Icon className="w-6 h-6 text-[#1A3013] transition-transform duration-500 group-hover:rotate-12" />
+                    <div className="w-12 h-12 rounded-xl border-2 border-black/10 group-hover:border-black bg-gray-50 flex items-center justify-center mb-6 transition-all duration-300">
+                      <Icon className="w-5 h-5 text-black transition-transform duration-500 group-hover:rotate-12" />
                     </div>
-                    <h4 className="text-lg font-black text-[#1A3013]  uppercase tracking-tight font-black mb-3 transition-colors duration-300">
+                    <h4 className="text-lg font-black text-[#1A3013] uppercase tracking-tight font-black mb-3 transition-colors duration-300">
                       {val.title}
                     </h4>
-                    <p className="text-gray-600  font-afaca text-sm md:text-base leading-relaxed transition-colors duration-300">
+                    <p className="text-gray-600 font-afaca text-sm md:text-base leading-relaxed transition-colors duration-300">
                       {val.desc}
                     </p>
                   </div>
@@ -204,18 +205,20 @@ export default function VisionMissionValues() {
 
         {/* Our Promise Callout */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-white/90 backdrop-blur-md rounded-[2.5rem] p-8 md:p-16 border border-white/50 shadow-2xl relative overflow-hidden"
+          className="bg-white rounded-[2.5rem] p-8 md:p-16 border-2 border-black relative overflow-hidden"
         >
           {/* Subtle line background decoration */}
-          <div className="absolute right-0 top-0 w-48 h-48 border-r-2 border-t-2 border-[#1A3013]/5 rounded-tr-[2.5rem] pointer-events-none" />
-          <div className="absolute left-0 bottom-0 w-48 h-48 border-l-2 border-b-2 border-[#1A3013]/5 rounded-bl-[2.5rem] pointer-events-none" />
+          <div className="absolute right-0 top-0 w-48 h-48 border-r-2 border-t-2 border-[#1A3013]/10 rounded-tr-[2.5rem] pointer-events-none" />
+          <div className="absolute left-0 bottom-0 w-48 h-48 border-l-2 border-b-2 border-[#1A3013]/10 rounded-bl-[2.5rem] pointer-events-none" />
 
           <div className="max-w-4xl mx-auto text-center flex flex-col items-center space-y-6">
-            <HeartHandshake className="w-12 h-12 text-green-950 mb-2 animate-pulse" />
+            <div className="w-16 h-16 rounded-2xl border-2 border-black flex items-center justify-center bg-gray-50 mb-2">
+              <HeartHandshake className="w-8 h-8 text-black" />
+            </div>
             <span className="text-xs font-mono font-bold tracking-[0.3em] text-[#1A3013] uppercase">
               Our Promise
             </span>
@@ -223,7 +226,7 @@ export default function VisionMissionValues() {
               Every client is unique. Every project presents different challenges.
             </h3>
 
-            <div className="w-12 h-[2px] bg-[#1A3013]/30 my-4" />
+            <div className="w-16 h-[2px] bg-black my-4" />
 
             <p className="text-gray-700 font-afaca text-lg md:text-xl leading-relaxed italic">
               &ldquo;Our promise remains the same—to deliver independent advice, practical engineering and measurable outcomes that help our clients build world-class manufacturing businesses with confidence.&rdquo;

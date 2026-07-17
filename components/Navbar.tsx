@@ -24,6 +24,14 @@ export default function Navbar() {
     { name: 'Operational Excellence', href: '/what-we-do/op' },
   ];
 
+  const ourServices = [
+    { name: 'Strategy & Technical', href: '/our-service/technical&stratergy' },
+    { name: 'EPCM Solutions', href: '/our-service/EPCM-solution' },
+    { name: 'Food Safety', href: '/our-service/Food-safety' },
+    { name: 'Legal Advisory', href: '/our-service/legal-advisory' },
+    { name: 'Smart Manufacturing', href: '/our-service/smrt-manufacturing' },
+  ];
+
   const aboutLinks = [
     { name: 'About Us', href: '/about-us' },
     { name: 'Value & Mission', href: '/about-us/value' },
@@ -39,6 +47,7 @@ export default function Navbar() {
   const allPages = [
     ...aboutLinks,
     ...whatwedo,
+    ...ourServices,
     ...navLinks,
     { name: 'Home', href: '/' },
     { name: 'Contact Us', href: '/contact-us' }
@@ -46,6 +55,7 @@ export default function Navbar() {
 
   const isAboutActive = aboutLinks.some(link => pathname === link.href);
   const isWhatWeDoActive = whatwedo.some(link => pathname === link.href);
+  const isOurServicesActive = ourServices.some(link => pathname === link.href);
 
   // Monitor scroll height to trigger glassmorphic state
   useEffect(() => {
@@ -86,9 +96,9 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`sticky top-0 z-40 w-full transition-all duration-300 font-afaca ${isScrolled
-          ? 'py-2 bg-[#F2F5E3]/85 backdrop-blur-md shadow-md border-b border-[#1A3013]/10'
-          : 'py-4 bg-[#F2F5E3] border-b border-transparent'
+      <nav className={`sticky top-0 z-40 w-full transition-all duration-300 ${isScrolled
+        ? 'py-2 bg-white/95 backdrop-blur-md shadow-md border-b border-[#1A3013]/10'
+        : 'py-4 bg-white border-b border-transparent'
         }`}>
         <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
 
@@ -109,51 +119,82 @@ export default function Navbar() {
 
               {/* About Dropdown */}
               <li className="relative group cursor-pointer font-bold text-sm xl:text-base">
-                <div className={`flex items-center transition-colors duration-300 pb-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-[#1A3013] after:transition-all after:duration-300 ${isAboutActive ? 'text-[#1A3013] after:w-full' : 'text-gray-600 hover:text-[#1A3013] after:w-0 group-hover:after:w-full'
+                <div className={`flex items-center transition-colors duration-300 pb-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-black/60 after:transition-all after:duration-300 ${isAboutActive ? 'text-black after:w-full' : 'text-gray-600 hover:text-black after:w-0 group-hover:after:w-full'
                   }`}>
                   <span>About Us</span>
                   <ChevronDown className="ml-1 w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" />
                 </div>
 
-                {/* Dropdown Menu */}
-                <div className="absolute top-full left-0 mt-2 bg-white/95 backdrop-blur-md shadow-xl rounded-xl border border-black/5 py-2 m-0 list-none z-50 min-w-[180px] opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300">
-                  {aboutLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className={`block px-5 py-2.5 text-sm transition-colors ${pathname === link.href
-                          ? 'text-[#1A3013] bg-[#F2F5E3]/50 font-black'
-                          : 'text-gray-600 hover:bg-[#F2F5E3]/30 hover:text-[#1A3013]'
-                        }`}
-                    >
-                      {link.name}
-                    </Link>
-                  ))}
+                {/* Dropdown Menu – pt-3 bridges the gap so group-hover never breaks */}
+                <div className="absolute top-full left-0 pt-3 z-50 min-w-[180px] opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300">
+                  <div className="bg-white/95 backdrop-blur-md shadow-xl rounded-xl border border-black/5 py-2">
+                    {aboutLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className={`block px-5 py-2.5 text-sm transition-colors ${pathname === link.href
+                          ? 'text-black bg-white/50 font-black'
+                          : 'text-gray-600 hover:bg-gray-100 hover:text-black'
+                          }`}
+                      >
+                        {link.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </li>
 
               {/* What We Do Dropdown */}
               <li className="relative group cursor-pointer font-bold text-sm xl:text-base">
-                <div className={`flex items-center transition-colors duration-300 pb-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-[#1A3013] after:transition-all after:duration-300 ${isWhatWeDoActive ? 'text-[#1A3013] after:w-full' : 'text-gray-600 hover:text-[#1A3013] after:w-0 group-hover:after:w-full'
+                <div className={`flex items-center transition-colors duration-300 pb-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-black/60 after:transition-all after:duration-300 ${isWhatWeDoActive ? 'text-black after:w-full' : 'text-gray-600 hover:text-black after:w-0 group-hover:after:w-full'
                   }`}>
                   <span>What We Do</span>
                   <ChevronDown className="ml-1 w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" />
                 </div>
 
-                {/* Dropdown Menu */}
-                <div className="absolute top-full left-0 mt-2 bg-white/95 backdrop-blur-md shadow-xl rounded-xl border border-black/5 py-2 m-0 list-none z-50 min-w-[200px] opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300">
-                  {whatwedo.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className={`block px-5 py-2.5 text-sm transition-colors ${pathname === link.href
-                          ? 'text-[#1A3013] bg-[#F2F5E3]/50 font-black'
-                          : 'text-gray-600 hover:bg-[#F2F5E3]/30 hover:text-[#1A3013]'
-                        }`}
-                    >
-                      {link.name}
-                    </Link>
-                  ))}
+                {/* Dropdown Menu – pt-3 bridges the gap so group-hover never breaks */}
+                <div className="absolute top-full left-0 pt-3 z-50 min-w-[200px] opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300">
+                  <div className="bg-white/95 backdrop-blur-md shadow-xl rounded-xl border border-black/5 py-2">
+                    {whatwedo.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className={`block px-5 py-2.5 text-sm transition-colors ${pathname === link.href
+                          ? 'text-black bg-white/50 font-black'
+                          : 'text-gray-600 hover:bg-gray-100 hover:text-black'
+                          }`}
+                      >
+                        {link.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </li>
+
+              {/* Our Services Dropdown */}
+              <li className="relative group cursor-pointer font-bold text-sm xl:text-base">
+                <div className={`flex items-center transition-colors duration-300 pb-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-black/60 after:transition-all after:duration-300 ${isOurServicesActive ? 'text-black after:w-full' : 'text-gray-600 hover:text-black after:w-0 group-hover:after:w-full'
+                  }`}>
+                  <span>Our Services</span>
+                  <ChevronDown className="ml-1 w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" />
+                </div>
+
+                {/* Dropdown Menu – pt-3 bridges the gap so group-hover never breaks */}
+                <div className="absolute top-full left-0 pt-3 z-50 min-w-[210px] opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300">
+                  <div className="bg-white/95 backdrop-blur-md shadow-xl rounded-xl border border-black/5 py-2">
+                    {ourServices.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className={`block px-5 py-2.5 text-sm transition-colors ${pathname === link.href
+                          ? 'text-black bg-white/50 font-black'
+                          : 'text-gray-600 hover:bg-gray-100 hover:text-black'
+                          }`}
+                      >
+                        {link.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </li>
 
@@ -162,7 +203,7 @@ export default function Navbar() {
                 <li key={link.href} className="font-bold text-sm xl:text-base">
                   <Link
                     href={link.href}
-                    className={`transition-colors duration-300 pb-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-[#1A3013] after:transition-all after:duration-300 ${pathname === link.href ? 'text-[#1A3013] after:w-full' : 'text-gray-600 hover:text-[#1A3013] after:w-0 hover:after:w-full'
+                    className={`transition-colors duration-300 pb-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-black/60 after:transition-all after:duration-300 ${pathname === link.href ? 'text-black after:w-full' : 'text-gray-600 hover:text-black after:w-0 hover:after:w-full'
                       }`}
                   >
                     {link.name}
@@ -180,13 +221,13 @@ export default function Navbar() {
               onClick={() => setIsSearchOpen(true)}
               aria-label="Open search"
             >
-              <Search className="w-5 h-5 text-[#1A3013] stroke-[2.5]" />
+              <Search className="w-5 h-5 text-black stroke-[2.5]" />
             </button>
 
             {/* Pill CTA button */}
             <Link
               href="/contact-us"
-              className="px-5 py-2.5 bg-[#1A3013] hover:bg-green-950 text-white rounded-full text-sm font-bold uppercase tracking-wider shadow transition-all duration-300 flex items-center space-x-2 shrink-0"
+              className="px-5 py-2.5 bg-black hover:bg-gray-800 text-white rounded-full text-sm font-bold uppercase tracking-wider shadow transition-all duration-300 flex items-center space-x-2 shrink-0"
             >
               <MessageSquare className="w-4 h-4" />
               <span>Contact Us</span>
@@ -200,7 +241,7 @@ export default function Navbar() {
               onClick={() => setIsSearchOpen(true)}
               aria-label="Open search"
             >
-              <Search className="w-5 h-5 text-[#1A3013] stroke-[2.5]" />
+              <Search className="w-5 h-5 text-black stroke-[2.5]" />
             </button>
 
             <button
@@ -208,7 +249,7 @@ export default function Navbar() {
               className="p-2 text-gray-700 hover:bg-black/5 rounded-full focus:outline-none"
               aria-label="Toggle mobile menu"
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A3013" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 {isMobileMenuOpen ? (
                   <>
                     <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -235,7 +276,7 @@ export default function Navbar() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden w-full bg-[#F2F5E3] border-b border-gray-200 overflow-hidden shadow-xl"
+              className="lg:hidden w-full bg-white border-b border-gray-200 overflow-hidden shadow-xl"
             >
               <ul className="flex flex-col m-0 p-6 list-none gap-4 font-bold">
                 <li>
@@ -259,6 +300,23 @@ export default function Navbar() {
                   <div className="text-gray-400 text-xs uppercase tracking-widest mb-2">What We Do</div>
                   <ul className="list-none pl-4 space-y-3">
                     {whatwedo.map((link) => (
+                      <li key={link.href}>
+                        <Link
+                          href={link.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className={`block py-1 text-sm ${pathname === link.href ? 'text-[#1A3013] font-black' : 'text-gray-600'}`}
+                        >
+                          {link.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+
+                <li>
+                  <div className="text-gray-400 text-xs uppercase tracking-widest mb-2">Our Services</div>
+                  <ul className="list-none pl-4 space-y-3">
+                    {ourServices.map((link) => (
                       <li key={link.href}>
                         <Link
                           href={link.href}

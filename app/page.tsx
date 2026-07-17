@@ -8,18 +8,14 @@ import dynamic from "next/dynamic";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
+import Preloader from "@/components/Preloader";
 
-// const TelemetryShowcase = dynamic(() => import("@/components/TelemetryShowcase"), {
-//   ssr: false,
-// });
 
 import TaglineIntro from "@/components/TaglineIntro";
 import WhatWeDoSection from "@/components/WhatWeDoSection";
 import ThreeDMarquee from "@/components/ThreeDMarquee";
 import VisionMissionValues from "@/components/VisionMissionValues";
 
-
-// --- Components ---
 
 function CounterItem({ target, suffix, label }: { target: number, suffix: string, label: string }) {
   const [count, setCount] = useState(0);
@@ -68,7 +64,7 @@ function CounterItem({ target, suffix, label }: { target: number, suffix: string
 // --- Main Page ---
 
 export default function Home() {
-  const [isLoaded, setIsLoaded] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
   const heroScrollRef = useRef(null);
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
@@ -145,7 +141,10 @@ export default function Home() {
 
   return (
     <>
-      {/* <TelemetryShowcase onComplete={() => setIsLoaded(true)} /> */}
+      {/* Preloader */}
+      {!isLoaded && (
+        <Preloader onComplete={() => setIsLoaded(true)} />
+      )}
 
       <div 
         id="main-site-content" 
@@ -261,7 +260,7 @@ export default function Home() {
       <VisionMissionValues />
 
       {/* Why Us Timeline */}
-      <section className="bg-[#BAC291] py-20 px-4 md:px-6">
+      <section className="bg-white py-20 px-4 md:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-6xl font-black text-[#1A3013] mb-4 tracking-tighter font-black uppercase">Why Paradigm</h2>
@@ -290,7 +289,7 @@ export default function Home() {
                       <motion.div 
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        className="bg-white/30 p-6 rounded-2xl border border-white/20 shadow-lg w-full md:w-auto"
+                        className="bg-white/30 p-6 rounded-2xl border border-black/50  w-full md:w-auto"
                       >
                         <p className="text-lg font-bold font-afaca">{point}</p>
                       </motion.div>
@@ -310,7 +309,7 @@ export default function Home() {
                       <motion.div 
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        className="bg-white/30 p-6 rounded-2xl border border-white/20 shadow-lg w-full md:w-auto"
+                        className="bg-white/30 p-6 rounded-2xl border border-black/50 w-full md:w-auto"
                       >
                         <p className="text-lg font-afaca font-bold text-[#1A3013]">{point}</p>
                       </motion.div>

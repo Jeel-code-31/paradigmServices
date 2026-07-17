@@ -13,9 +13,9 @@ const config: Config = {
         'paradigm-green': '#006400',
       },
       fontFamily: {
-        afaca: ['Afacad', 'sans-serif'],
-        black: ['"Bookman Old Style"', '"EB Garamond"', 'serif'],
-        numbers: ['"Lucida Handwriting"', 'Lumanosimo', 'cursive'],
+        afaca: ['Montserrat', 'sans-serif'],
+        black: ['Montserrat', 'sans-serif'],
+        numbers: ['Montserrat', 'sans-serif'],
       },
     },
   },

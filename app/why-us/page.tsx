@@ -4,22 +4,16 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import {
   ShieldCheck,
-  ArrowRight,
   Maximize2,
-  FileCheck,
-  Compass,
-  Layers,
-  Award,
   X,
-  Target,
   TrendingUp,
   Heart
 } from "lucide-react";
 
 const COLORS = {
   primary: "#1A3013", // Deep Forest Green
-  accent: "#BAC291",  // Sage Green
-  bgSecondary: "#F7F9EF"
+  accent: "#1A3013",  // Kept as Forest Green for text cohesion
+  bgSecondary: "#F4F6F0"
 };
 
 const STATS = [
@@ -49,10 +43,10 @@ export default function WhyUs() {
   }, [activeCert]);
 
   return (
-    <main className="min-h-screen bg-white text-[#1A3013] selection:bg-[#BAC291] selection:text-[#1A3013]">
+    <main className="min-h-screen bg-white text-[#1A3013] selection:bg-[#1A3013]/10 selection:text-[#1A3013]">
 
       {/* 1. TOP STATUS BAR */}
-      <div style={{ backgroundColor: COLORS.accent }} className="w-full py-3 px-10 sticky top-0 z-[60] flex justify-between items-center shadow-sm">
+      <div className="w-full py-3 px-10 sticky top-0 z-[60] flex justify-between items-center shadow-sm bg-white border-b border-gray-100">
         <span style={{ color: COLORS.primary }} className="text-[10px] font-black uppercase tracking-[0.4em]">
           The Paradigm Advantage // 2026
         </span>
@@ -63,18 +57,18 @@ export default function WhyUs() {
       </div>
 
       {/* 2. HERO SECTION */}
-      <section className="relative h-[80vh] flex items-center bg-[#1A3013] overflow-hidden">
-        <motion.div style={{ y: y1 }} className="absolute inset-0 opacity-20 pointer-events-none">
-          <div className="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] bg-[#BAC291] rounded-full blur-[150px]" />
+      <section className="relative h-[80vh] flex items-center bg-white overflow-hidden border-b border-gray-100">
+        <motion.div style={{ y: y1 }} className="absolute inset-0 opacity-5 pointer-events-none">
+          <div className="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] bg-[#1A3013] rounded-full blur-[150px]" />
         </motion.div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-10 w-full">
           <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
-            <h1 className="text-6xl md:text-8xl font-black text-white leading-[0.9] tracking-tighter mb-8">
+            <h1 className="text-6xl md:text-8xl font-black text-[#1A3013] leading-none tracking-tighter mb-8 break-words">
               PRECISION <br />
-              <span style={{ color: COLORS.accent }}>IN PROCESS.</span>
+              <span className="text-gray-400">IN PROCESS.</span>
             </h1>
-            <p className="max-w-xl text-white/60 text-lg md:text-xl font-medium leading-relaxed font-afaca">
+            <p className="max-w-xl text-[#1A3013]/80 text-lg md:text-xl font-medium leading-relaxed font-afaca break-words">
               We bridge the gap between regulatory complexity and operational reality through multidisciplinary engineering and uncompromising integrity.
             </p>
           </motion.div>
@@ -85,9 +79,9 @@ export default function WhyUs() {
       <section className="py-20 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-10 grid grid-cols-2 lg:grid-cols-4 gap-12">
           {STATS.map((stat, i) => (
-            <div key={i} className="text-center lg:text-left">
-              <h3 style={{ color: COLORS.primary }} className="text-5xl md:text-6xl font-black mb-2 tracking-tighter">{stat.value}</h3>
-              <p className="text-gray-400 font-bold uppercase text-[10px] tracking-[0.3em]">{stat.label}</p>
+            <div key={i} className="text-center lg:text-left break-words">
+              <h3 style={{ color: COLORS.primary }} className="text-5xl md:text-6xl font-black mb-2 tracking-tighter leading-none">{stat.value}</h3>
+              <p className="text-gray-400 font-bold uppercase text-[10px] tracking-[0.3em] leading-normal">{stat.label}</p>
             </div>
           ))}
         </div>
@@ -96,41 +90,41 @@ export default function WhyUs() {
       {/* 4. REALISTIC VALUES SECTION */}
       <section className="py-32 max-w-7xl mx-auto px-10">
         <div className="grid lg:grid-cols-3 gap-16">
-          <div className="space-y-6">
-            <ShieldCheck className="text-[#BAC291]" size={48} />
-            <h3 className="text-3xl font-bold tracking-tight">Technical Substance</h3>
+          <div className="space-y-6 break-words">
+            <ShieldCheck className="text-[#1A3013]" size={48} />
+            <h3 className="text-3xl font-bold tracking-tight text-[#1A3013] leading-tight">Technical Substance</h3>
             <p className="text-gray-500 font-medium leading-relaxed font-afaca">Our audits go beyond checklists. We analyze the root cause of non-compliance to ensure long-term facility safety.</p>
           </div>
-          <div className="space-y-6">
-            <TrendingUp className="text-[#BAC291]" size={48} />
-            <h3 className="text-3xl font-bold tracking-tight">Global Connectivity</h3>
+          <div className="space-y-6 break-words">
+            <TrendingUp className="text-[#1A3013]" size={48} />
+            <h3 className="text-3xl font-bold tracking-tight text-[#1A3013] leading-tight">Global Connectivity</h3>
             <p className="text-gray-500 font-medium leading-relaxed font-afaca">Operating across India and international borders, we navigate BRC, US FDA, and FSSAI landscapes with local expertise.</p>
           </div>
-          <div className="space-y-6">
-            <Heart className="text-[#BAC291]" size={48} />
-            <h3 className="text-3xl font-bold tracking-tight">Adaptive Learning</h3>
+          <div className="space-y-6 break-words">
+            <Heart className="text-[#1A3013]" size={48} />
+            <h3 className="text-3xl font-bold tracking-tight text-[#1A3013] leading-tight">Adaptive Learning</h3>
             <p className="text-gray-500 font-medium leading-relaxed font-afaca">The regulatory world changes daily. Our team stays at the forefront of global hygiene and pharmaceutical trends.</p>
           </div>
         </div>
       </section>
 
-      {/* 5. RECENT CODE: THE 3D CERTIFICATE VAULT */}
-      <section style={{ backgroundColor: COLORS.primary }} className="py-40 px-10 relative overflow-hidden">
+      {/* 5. 3D CERTIFICATE VAULT */}
+      <section className="py-40 px-10 relative overflow-hidden bg-gray-50 border-t border-gray-100">
         {/* Decorative Background for the Vault */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-[#BAC291] rounded-full blur-3xl" />
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-[#1A3013] rounded-full blur-3xl" />
         </div>
 
         <div className="max-w-7xl mx-auto flex flex-col items-center">
-          <div className="text-center mb-24 relative z-10">
+          <div className="text-center mb-24 relative z-10 break-words">
             <motion.h2
               initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
               style={{ color: COLORS.accent }}
-              className="text-[10px] font-black uppercase tracking-[0.6em] mb-4"
+              className="text-[10px] font-black uppercase tracking-[0.6em] mb-4 leading-normal"
             >
               Official Credentials
             </motion.h2>
-            <h3 className="text-5xl md:text-7xl font-black text-white tracking-tighter uppercase">The Vault.</h3>
+            <h3 className="text-5xl md:text-7xl font-black text-[#1A3013] tracking-tighter uppercase leading-none">The Vault.</h3>
           </div>
 
           {/* 3D Perspective Container */}
@@ -157,15 +151,15 @@ export default function WhyUs() {
                   transformStyle: "preserve-3d"
                 }}
               >
-                {/* Acrylic Glass Frame / Recent Code Styling */}
-                <div className="w-full h-full bg-white/5 backdrop-blur-xl border border-white/20 rounded-3xl p-4 shadow-[0_30px_60px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col">
-                  <div className="flex-1 rounded-2xl bg-white relative overflow-hidden">
-                    <img src={cert.src} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700" alt={cert.title} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1A3013]/60 to-transparent opacity-0 group-hover:opacity-100 transition-all" />
-                    <Maximize2 className="absolute bottom-6 right-6 text-white opacity-0 group-hover:opacity-100" />
+                {/* Acrylic Glass Frame Layout */}
+                <div className="w-full h-full bg-white border border-black/10 rounded-3xl p-4 shadow-[0_20px_40px_rgba(0,0,0,0.05)] overflow-hidden flex flex-col transition-colors group-hover:border-[#1A3013]/30">
+                  <div className="flex-1 rounded-2xl bg-gray-50 relative overflow-hidden">
+                    <img src={cert.src} className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-700" alt={cert.title} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1A3013]/40 to-transparent opacity-0 group-hover:opacity-100 transition-all" />
+                    <Maximize2 className="absolute bottom-6 right-6 text-white opacity-0 group-hover:opacity-100 shrink-0" />
                   </div>
-                  <div className="pt-6 pb-2 px-2">
-                    <h4 style={{ color: COLORS.accent }} className="font-bold text-lg leading-tight mb-1">{cert.title}</h4>
+                  <div className="pt-6 pb-2 px-2 break-words">
+                    <h4 style={{ color: COLORS.accent }} className="font-black text-lg leading-tight mb-1 uppercase tracking-tight">{cert.title}</h4>
                   </div>
                 </div>
               </motion.div>
@@ -179,21 +173,24 @@ export default function WhyUs() {
         {activeCert && (
           <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-[#1A3013]/95 backdrop-blur-2xl flex items-center justify-center p-6"
+            className="fixed inset-0 z-[100] bg-black/45 backdrop-blur-xl flex items-center justify-center p-6"
           >
             <motion.div
               initial={{ scale: 0.9, y: 30 }} animate={{ scale: 1, y: 0 }}
-              className="bg-white max-w-5xl w-full rounded-[3rem] overflow-hidden flex flex-col md:flex-row relative shadow-2xl"
+              className="bg-white max-w-5xl w-full rounded-[3rem] overflow-hidden flex flex-col md:flex-row relative shadow-2xl border border-black/5"
             >
-              <button onClick={() => setActiveCert(null)} className="absolute top-10 right-10 p-4 text-yellow-300 hover:text-white bg-green-700 transition-colors">
-                <X size={32} strokeWidth={5} />
+              <button 
+                onClick={() => setActiveCert(null)} 
+                className="absolute top-8 right-8 p-4 text-black hover:bg-gray-100 rounded-full transition-colors z-50 border border-black/5"
+              >
+                <X size={24} strokeWidth={3} />
               </button>
 
-              <div className="flex w-full items-center justify-center bg-[#F7F9EF] pt-10 p-6 md:w-5/5 md:p-12">
+              <div className="flex w-full items-center justify-center bg-white pt-16 p-6 md:p-12">
                 <img
                   src={activeCert.src}
                   alt={activeCert.title || "Certification Display"}
-                  className="h-auto max-w-full rounded-sm shadow-2xl transition-all duration-300 hover:scale-[1.02]"
+                  className="h-auto max-w-full rounded-xl shadow-xl border border-black/5 transition-all duration-300 hover:scale-[1.01]"
                   loading="lazy"
                 />
               </div>

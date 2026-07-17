@@ -59,10 +59,10 @@ export default function WhatWeDoSection() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#1A3013] tracking-tighter uppercase font-black">
+              <h2 className="text-4xl md:text-3xl lg:text-5xl font-black text-black tracking-tighter uppercase font-black">
                 What We Do
               </h2>
-              <div className="w-16 h-1 bg-[#1A3013] mt-4 rounded-full" />
+              <div className="w-16 h-1 bg-black mt-4 rounded-full" />
             </motion.div>
           </div>
           
@@ -74,7 +74,7 @@ export default function WhatWeDoSection() {
               viewport={{ once: true }}
               className="space-y-6 text-gray-700 font-afaca text-lg md:text-xl leading-relaxed"
             >
-              <p className="font-bold text-[#1A3013] text-xl md:text-2xl leading-snug">
+              <p className="font-bold text-black text-xl md:text-2xl leading-snug">
                 We transform food, beverage, pharmaceutical and process industries — from concept to world-class operations.
               </p>
               <p>
@@ -93,24 +93,23 @@ export default function WhatWeDoSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-transparent p-8 rounded-2xl border border-green-850/30 hover:border-[#1A3013] hover:shadow-lg transition-all duration-300 flex items-center space-x-4 cursor-default group"
+              className="bg-transparent p-8 rounded-2xl border border-black/50 h  over:shadow-lg transition-all duration-300 flex items-center space-x-4 cursor-default group"
             >
-              <div className="text-[#1A3013] group-hover:scale-110 transition-transform duration-300 shrink-0">
+              <div className="text-black group-hover:scale-110 transition-transform duration-300 shrink-0">
                 {(() => {
                   const Icon = ind.icon;
                   return <Icon className="w-10 h-10 stroke-[1.8]" />;
                 })()}
               </div>
               <div>
-                <h3 className="text-xl font-black text-[#1A3013] uppercase tracking-tight font-black">{ind.name}</h3>
-                <span className="text-xs text-green-800 font-mono font-bold tracking-wider">World-Class Standards</span>
+                <h3 className="text-xl font-black text-black uppercase tracking-tight font-black">{ind.name}</h3>
               </div>
             </motion.div>
           ))}
         </div>
 
         {/* Interactive Lifecycle Explorer */}
-        <div className="bg-[#F9FAFB] rounded-[2.5rem] border border-black/5 p-8 md:p-12 shadow-inner">
+        <div className="bg-white rounded-[2.5rem] border border-black/5 p-8 md:p-12 shadow-inner">
           <div className="text-center md:text-left mb-10">
             <span className="text-xs font-mono font-bold tracking-[0.25em] text-green-800 uppercase block mb-2">
               Complete Manufacturing Lifecycle
@@ -135,7 +134,7 @@ export default function WhatWeDoSection() {
                     onClick={() => setActiveStep(idx)}
                     className={`flex items-center text-left p-4 rounded-xl border transition-all duration-300 group relative overflow-hidden ${
                       isActive
-                        ? "bg-[#1A3013] text-white border-transparent shadow-lg shadow-[#1A3013]/10"
+                        ? " text-black border-black/100"
                         : "bg-white text-gray-700 border-black/5 hover:border-green-800/30 hover:bg-gray-50"
                     }`}
                   >
@@ -156,7 +155,7 @@ export default function WhatWeDoSection() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4 }}
-                className="bg-white p-8 md:p-12 rounded-[2rem] border border-black/5 shadow-xl h-full flex flex-col justify-between relative overflow-hidden"
+                className="bg-white p-8 md:p-12 rounded-[2rem] border border-black/20 h-full flex flex-col justify-between relative overflow-hidden"
               >
                 {/* Visual tech badge in card */}
                 <div className="absolute right-6 top-6 text-7xl font-bold text-gray-50 select-none pointer-events-none font-mono">
@@ -165,15 +164,14 @@ export default function WhatWeDoSection() {
 
                 <div className="space-y-6">
                   <div className="flex items-center space-x-3">
-                    <div className="p-3 rounded-lg bg-[#F2F5E3]">
+                    <div className="p-3 rounded-lg bg-gray-100">
                       {(() => {
                         const CurrentIcon = steps[activeStep].icon;
                         return <CurrentIcon className="w-6 h-6 text-green-900" />;
                       })()}
                     </div>
                     <div>
-                      <span className="text-xs font-mono text-green-800 uppercase tracking-widest block">Phase 0{activeStep + 1}</span>
-                      <h4 className="text-2xl font-black text-[#1A3013] uppercase tracking-tight font-black">
+                      <h4 className="text-2xl font-black text-black uppercase tracking-tight font-black">
                         {steps[activeStep].title}
                       </h4>
                     </div>
@@ -183,7 +181,7 @@ export default function WhatWeDoSection() {
                     {steps[activeStep].desc}
                   </p>
 
-                  <p className="text-gray-500 font-afaca text-sm md:text-base italic pl-4 border-l-2 border-[#1A3013]/25">
+                  <p className="text-gray-500 font-afaca text-sm md:text-base italic pl-4 border-l-2 border-black/10">
                     {steps[activeStep].detail}
                   </p>
                 </div>
@@ -202,14 +200,14 @@ export default function WhatWeDoSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mt-16 bg-[#1A3013] text-white p-8 md:p-12 rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl relative overflow-hidden"
+          className="mt-16 bg-white text-black p-8 md:p-12 rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl relative overflow-hidden"
         >
-          <div className="absolute right-0 top-0 w-32 h-32 bg-[#BAC291]/10 rounded-full blur-xl pointer-events-none" />
+          <div className="absolute right-0 top-0 w-32 h-32 bg-gray-100/20 rounded-full blur-xl pointer-events-none" />
           <div className="space-y-2">
-            <h4 className="text-xl md:text-2xl font-black uppercase tracking-tight font-black text-[#BAC291]">
+            <h4 className="text-xl md:text-2xl font-black uppercase tracking-tight font-black text-black">
               One Partner. Complete Manufacturing Transformation.
             </h4>
-            <p className="text-white/70 font-afaca text-sm md:text-base max-w-2xl">
+            <p className="text-black/70 font-afaca text-sm md:text-base max-w-2xl">
               Paradigm brings together strategy, engineering, food safety, digital transformation and operational excellence under one roof.
             </p>
           </div>
@@ -221,7 +219,7 @@ export default function WhatWeDoSection() {
                 window.location.href = "/contact-us";
               }
             }}
-            className="shrink-0 bg-[#BAC291] text-[#1A3013] hover:bg-white hover:text-green-950 transition-colors font-bold px-6 py-3 rounded-full text-sm uppercase tracking-wider flex items-center space-x-2"
+            className="shrink-0 bg-white border border-black/50 text-black hover:bg-gray-50 transition-colors font-bold px-6 py-3 rounded-full text-sm uppercase tracking-wider flex items-center space-x-2"
           >
             <span>Partner With Us</span>
             <ArrowRight className="w-4 h-4" />

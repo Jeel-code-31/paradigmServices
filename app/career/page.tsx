@@ -103,21 +103,21 @@ export default function Careers() {
   const filteredJobs = JOBS.filter(j => j.title.toLowerCase().includes(search.toLowerCase()));
 
   return (
-    <main className="min-h-screen bg-white text-[#1A3013]">
+    <main className="min-h-screen bg-white text-black">
       
       {/* 1. HEADER */}
-      <div style={{ backgroundColor: COLORS.accent }} className="w-full py-3 px-10">
-        <p className="text-xs font-bold uppercase tracking-[0.2em]">Careers // Paradigm Quality Consultancy</p>
+      <div className="w-full py-3 px-10 bg-white">
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-black">Careers // Paradigm Quality Consultancy</p>
       </div>
 
       {/* 2. HERO */}
-      <section className="relative h-[40vh] flex items-center bg-[#1A3013] px-10 overflow-hidden">
+      <section className="relative h-[40vh] flex items-center bg-white px-10 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-[#BAC291] rounded-full blur-[120px]" />
+            <div className="absolute top-0 right-0 w-96 h-96 bg-gray-100 rounded-full blur-[120px]" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto w-full text-center md:text-left">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">Work with <span style={{ color: COLORS.accent }}>Impact.</span></h1>
-          <p className="text-white/60 font-afaca text-2xl max-w-2xl">Working at Paradigm Means Working in a network of state-of-the-art Facilities and passsionate people who deliver superior service to industry.</p>
+          <h1 className="text-5xl md:text-7xl font-bold text-black mb-4">Work with <span className="text-black">Impact.</span></h1>
+          <p className="text-black/70 font-afaca text-2xl max-w-2xl">Working at Paradigm Means Working in a network of state-of-the-art Facilities and passsionate people who deliver superior service to industry.</p>
         </div>
       </section>
 
@@ -142,7 +142,7 @@ export default function Careers() {
               key={job.id}
               whileHover={{ x: 10 }}
               onClick={() => setSelectedJob(job)}
-              className="p-8 border border-gray-100 rounded-[2rem] flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-[#F7F9EF] transition-all group"
+              className="p-8 border border-gray-100 rounded-[2rem] flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition-all group"
             >
               <div>
                 <h4 className="text-2xl font-bold mb-2">{job.title}</h4>
@@ -231,7 +231,7 @@ export default function Careers() {
                    </div>
                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {selectedJob.benefits.map((item, i) => (
-                        <div key={i} className="bg-[#F7F9EF] p-4 rounded-xl text-sm font-bold text-[#1A3013]">
+                        <div key={i} className="bg-gray-100 p-4 rounded-xl text-sm font-bold text-black">
                            {item}
                         </div>
                       ))}
@@ -240,15 +240,15 @@ export default function Careers() {
               </div>
 
               {/* RIGHT: QUICK APPLY SIDEBAR (Desktop) */}
-              <div style={{ backgroundColor: COLORS.bgSecondary }} className="w-full md:w-96 p-8 md:p-12 flex flex-col justify-center relative">
+              <div className="w-full md:w-96 p-8 md:p-12 flex flex-col justify-center relative bg-white">
                 <button onClick={() => setSelectedJob(null)} className="hidden md:block absolute top-10 right-10 text-gray-400 hover:text-black">
                     <X size={32} />
                 </button>
 
                 <h4 className="text-2xl font-black mb-8">Ready to apply?</h4>
                 <form onSubmit={(e) => { e.preventDefault(); setIsSuccess(true); setSelectedJob(null); }} className="space-y-4">
-                  <input required type="text" placeholder="Full Name" className="w-full p-4 rounded-xl border-0 bg-white shadow-sm outline-none focus:ring-2 focus:ring-[#BAC291]" />
-                  <input required type="email" placeholder="Email Address" className="w-full p-4 rounded-xl border-0 bg-white shadow-sm outline-none focus:ring-2 focus:ring-[#BAC291]" />
+                  <input required type="text" placeholder="Full Name" className="w-full p-4 rounded-xl border-0 bg-white shadow-sm outline-none focus:ring-2 focus:ring-gray-300" />
+                  <input required type="email" placeholder="Email Address" className="w-full p-4 rounded-xl border-0 bg-white shadow-sm outline-none focus:ring-2 focus:ring-gray-300" />
                   
                   <label className="block w-full border-2 border-dashed border-gray-300 rounded-xl p-6 text-center cursor-pointer hover:bg-white/50 transition-colors">
                     <Upload className="mx-auto mb-2 text-gray-400" size={24} />
@@ -256,7 +256,7 @@ export default function Careers() {
                     <input type="file" required className="hidden" />
                   </label>
 
-                  <button style={{ backgroundColor: COLORS.primary }} className="w-full py-5 rounded-xl text-white font-bold uppercase tracking-widest hover:brightness-125 shadow-xl transition-all">
+                  <button className="w-full py-5 rounded-xl bg-black text-white font-bold uppercase tracking-widest hover:brightness-95 shadow-xl transition-all">
                     Send Application
                   </button>
                   <p className="text-[10px] text-gray-400 text-center uppercase tracking-widest mt-4">By clicking send, you agree to our privacy policy.</p>
@@ -270,12 +270,12 @@ export default function Careers() {
       {/* SUCCESS OVERLAY */}
       <AnimatePresence>
         {isSuccess && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="fixed inset-0 z-[110] bg-[#1A3013] flex items-center justify-center text-center p-6">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="fixed inset-0 z-[110] bg-black/40 flex items-center justify-center text-center p-6">
             <div className="max-w-sm">
-                <CheckCircle size={80} style={{ color: COLORS.accent }} className="mx-auto mb-6" />
-                <h3 className="text-white text-4xl font-black mb-4">Application Sent.</h3>
-                <p className="text-white/60 mb-10 font-afaca">We have received your application. Our recruitment team will review it and get back to you within 3-5 business days.</p>
-                <button onClick={() => setIsSuccess(false)} style={{ backgroundColor: COLORS.accent }} className="w-full py-4 rounded-full font-bold uppercase tracking-widest">Return to Careers</button>
+                <CheckCircle size={80} className="mx-auto mb-6 text-black" />
+                <h3 className="text-black text-4xl font-black mb-4">Application Sent.</h3>
+                <p className="text-black/70 mb-10 font-afaca">We have received your application. Our recruitment team will review it and get back to you within 3-5 business days.</p>
+                <button onClick={() => setIsSuccess(false)} className="w-full py-4 rounded-full bg-black text-white font-bold uppercase tracking-widest">Return to Careers</button>
             </div>
           </motion.div>
         )}

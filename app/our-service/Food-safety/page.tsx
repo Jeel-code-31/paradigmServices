@@ -24,8 +24,8 @@ interface Service {
 const services: Service[] = [
   {
     id: "infrastructure",
-    title: "Overall supervision",
-    subtitle: "Overall supervision",
+    title: "GMP & hygienic design",
+    subtitle: "Architecture & Structural",
     shortDesc: "Understand user Requirement and optimal basic engineering....",
     fullDesc: (
       <>
@@ -47,7 +47,7 @@ const services: Service[] = [
   },
   {
     id: "hvac",
-    title: "Construction management services",
+    title: "GFSI-recognised food safety systems (FSSC 22000, BRCGS)",
     subtitle: "GMP & FDA Compliance",
     shortDesc: "Understand Structural Requirements....",
     fullDesc: (
@@ -80,7 +80,7 @@ const services: Service[] = [
   },
   {
     id: "ma",
-    title: "Procurement Inspection Services",
+    title: "US FDA, EU & international regulatory compliance",
     subtitle: "Electrical & Instrumentation",
     shortDesc: "Design of Efficent Utility system and piping engineering",
     fullDesc: (
@@ -103,7 +103,7 @@ const services: Service[] = [
   },
   {
     id: "hv",
-    title: "Enquiry preparation to order placement",
+    title: "FSSAI compliance",
     subtitle: "Enquiry to Commissioning",
     shortDesc: "Design of HVAC systems catering to the latest GMP and FDA Requirements.",
     fullDesc: (
@@ -126,7 +126,7 @@ const services: Service[] = [
   },
   {
     id: "AI",
-    title: "Inspection Services",
+    title: "Validation & qualification",
     subtitle: "Enquiry to Commissioning",
     shortDesc: "Design of Detaling of controls.....",
     fullDesc: (
@@ -142,6 +142,72 @@ const services: Service[] = [
         .Preparation of Hook-up drawings loop Schemtics,Jb Details,Cable Schedule,Air header schedules.
         <br></br>
         .Preparation of Specification for fire detection and alaram system,Access Control system and Door Intrlock system and prepare for document instrumentation works.
+      </>
+    ),
+    icon: <HardHat className="w-12 h-12" />,
+    img: "https://images.unsplash.com/photo-1503387762-592dea58ef21?auto=format&fit=crop&q=80&w=1200",
+    highlights: ["Construction Supervision", "Vendor Inspection", "Timeline Management", "Commissioning Support"],
+    color: "#BAC291"
+  },
+  {
+    id: "EE",
+    title: "Food defence & food fraud mitigation",
+    subtitle: "Enquiry to Commissioning",
+    shortDesc: "Understand safety zoning Requirements and efficient design of electrical.....",
+    fullDesc: (
+      <>
+        .Selection and Sizing of Transformewrs and Deign of Substations.
+        <br /><br />
+        .Emergency power supply systems through DG sets and with AMF panels.
+        <br /><br />
+        .Design of power control centers and motor control centers with SFUs/Contractors/ MCCBs,Automatic power factor improvement Capacitors banks.
+        <br /><br />
+        .Internal Electrification such as Lighting (Gor Normal offices/complexes as per IS:3646 and also for hazardous factory areas with FLP fixtures), Power Wiring/cabling etc.
+        <br /><br />
+        .Security systems like Access Control Systems,CCTV Systems, Parking Management Systems & building Automation Systems.
+      </>
+    ),
+    icon: <HardHat className="w-12 h-12" />,
+    img: "https://images.unsplash.com/photo-1503387762-592dea58ef21?auto=format&fit=crop&q=80&w=1200",
+    highlights: ["Construction Supervision", "Vendor Inspection", "Timeline Management", "Commissioning Support"],
+    color: "#BAC291"
+  },
+  {
+    id: "FS",
+    title: "Food defence & food fraud mitigation",
+    subtitle: "Enquiry to Commissioning",
+    shortDesc: "Detaild design of hydrant network as per requirements in every area.....",
+    fullDesc: (
+      <>
+        .Preparation of P & ID For fire hydrant system..
+        <br /><br />
+        .Detailed Design of Hydrant system as per requirements in every area
+        <br /><br />
+        .Layout of hydrant,hose boxes and other related items,Exitinguishers & Lightening arrestors, also Escape routing & identification of assembly points.
+
+      </>
+    ),
+    icon: <HardHat className="w-12 h-12" />,
+    img: "https://images.unsplash.com/photo-1503387762-592dea58ef21?auto=format&fit=crop&q=80&w=1200",
+    highlights: ["Emergency", "Specific Equipments & istruments", "Detailed bill of material"],
+    color: "#BAC291"
+  },
+   {
+    id: "EE",
+    title: "Audit readiness & compliance management",
+    subtitle: "Enquiry to Commissioning",
+    shortDesc: "Understand safety zoning Requirements and efficient design of electrical.....",
+    fullDesc: (
+      <>
+        .Selection and Sizing of Transformewrs and Deign of Substations.
+        <br /><br />
+        .Emergency power supply systems through DG sets and with AMF panels.
+        <br /><br />
+        .Design of power control centers and motor control centers with SFUs/Contractors/ MCCBs,Automatic power factor improvement Capacitors banks.
+        <br /><br />
+        .Internal Electrification such as Lighting (Gor Normal offices/complexes as per IS:3646 and also for hazardous factory areas with FLP fixtures), Power Wiring/cabling etc.
+        <br /><br />
+        .Security systems like Access Control Systems,CCTV Systems, Parking Management Systems & building Automation Systems.
       </>
     ),
     icon: <HardHat className="w-12 h-12" />,
@@ -172,12 +238,12 @@ export default function EngineeringAdvisory() {
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="space-y-4">
          
             <h1 className="text-xl md:text-5xl font-black text-[#1A3013] uppercase leading-[0.8] tracking-tighter font-black">
-            Engineering Design – factory infrastructure and project management
+             Food Safety, GMP & Regulatory Excellence
             </h1>
           </motion.div>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-auto text-xl md:text-2xl text-gray-600 font-medium leading-relaxed">
-          We are well equipped to meet the basic & detailed Engineering design services and has undertaken factory infrastructure designing and project management services. The designs are undertaken with efficient process engineering, automation in-compliance with product safety requirements meeting international food safety standards and Global best practices. All the following required engineering disciplines are in-house with us, thus working in close coordination resulting in minimum time.
-        </motion.p>
+           We help organisations implement internationally recognised food safety, GMP, EHS and sustainability standards—from hygienic design during project planning through regulatory compliance and audit readiness during operations
+          </motion.p>
         </section>
 
         <div className="space-y-40 md:space-y-80">

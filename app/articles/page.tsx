@@ -32,12 +32,12 @@ export default function ArticlesPage() {
   const hasMore = visibleCount < filteredArticles.length;
 
   return (
-    <main className="min-h-screen bg-yellow-50">
+    <main className="min-h-screen bg-white">
       <section className="bg-[#1A3013] py-20">
         <div className="max-w-6xl mx-auto px-6 text-white">
-          <p className="text-sm uppercase tracking-[0.35em] text-[#BAC291] mb-4">Insights & Articles</p>
+          <p className="text-sm uppercase tracking-[0.35em] text-black/70 mb-4">Insights & Articles</p>
           <h1 className="text-4xl md:text-5xl font-black leading-tight">Blog</h1>
-          <p className="mt-6 max-w-3xl text-base md:text-lg text-white/80 font-afaca leading-relaxed">
+          <p className="mt-6 max-w-3xl text-base md:text-lg text-black/70 font-afaca leading-relaxed">
             Explore in-depth guidance, process improvements, and practical ideas that align with Paradigm's theme of precision, compliance, and measurable impact.
           </p>
         </div>
@@ -52,8 +52,8 @@ export default function ArticlesPage() {
               onClick={() => setSelectedYear("all")}
               className={`px-6 py-3 rounded-full text-sm font-bold uppercase tracking-[0.15em] transition-all duration-200 ${
                 selectedYear === "all"
-                  ? "bg-[#1A3013] text-white shadow-lg"
-                  : "bg-gray-100 text-gray-600 hover:bg-[#BAC291] hover:text-[#1A3013]"
+                      ? "bg-black text-white shadow-lg"
+                      : "bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-black"
               }`}
             >
               All Years
@@ -84,8 +84,8 @@ export default function ArticlesPage() {
             <div className="grid gap-10 lg:grid-cols-3">
               {visibleArticles.map((article) => (
                 <article key={article.slug} className="group rounded-[2rem] bg-white shadow-2xl border border-black/5 overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
-                  <div className="relative overflow-hidden bg-[#f2f4ef]">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#BAC291]/30 to-[#1A3013]/20 opacity-90 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="relative overflow-hidden bg-white">
+                    <div className="absolute inset-0 bg-gradient-to-br from-gray-100/30 to-black/10 opacity-90 transition-opacity duration-500 group-hover:opacity-100" />
                     <div className="relative h-60 overflow-hidden">
                       <img
                         src={article.image}

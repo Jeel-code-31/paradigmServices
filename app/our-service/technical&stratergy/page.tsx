@@ -26,32 +26,31 @@ interface Service {
 const services: Service[] = [
   {
     id: "gap",
-    title: "system implementations",
-    subtitle: "system implementation",
-    shortDesc: "We provide guidence of meeeting the requirement of global standards of layout, flow of material, equipment, personnel, waste and utilities",
-    fullDesc: "We help to bridge the gap between desired and actual by reviewing and incorporation all of the food sfety. Sanitation requirements, records",
+    title: "Market & investment feasibility studies",
+    subtitle: "Potential vs Performance",
+    shortDesc: "Strategic alignment through thorough gap analysis and risk assessment.",
+    fullDesc: "We provide a rigorous analysis of your market position, investment viability, and project risks. Our feasibility studies bridge the gap between opportunity and execution, ensuring your projects begin with strategic clarity.",
     icon: <TrendingUp className="w-12 h-12" />,
     img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
-    highlights: ["Food safety requirements in consultation with the project Team."],
+    highlights: ["we provide guidence of meeeting the requirement of global standards of layout, flow of material, equipment, personnel, waste and utilities", "We help to bridge the gap between desired and actual by reviewing and incorporation all of the food sfety. Sanitation requirements, records", "Food safety requirements in consultation with the project Team."],
     color: "#BAC291"
   },
   {
     id: "training",
-    title: "•	Gap Assessment",
-    subtitle: "Implementation Competencee ",
-    shortDesc: "We provide a rigorous analysis of your market position, investment viability, and project risks. Our feasibility studies bridge the gap between opportunity and execution, ensuring your projects begin with strategic clarity.",
+    title: "Product & process development",
+    subtitle: "Implementation Competence",
+    shortDesc: "From idea to scalable production, we transform concepts into market-ready realities.",
     fullDesc: "We Consult your core your core team for implementation of food tailor a program that reflects your specification and expectations.",
     icon: <GraduationCap className="w-12 h-12" />,
     img: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1200",
-    highlights: ["Core team", "tailow a program", "Training programme", "senior staff", "Food safety requirements in consultation with the project Team."],
-    color: "#BAC291",
-    standards: ["ISO 9001", "ISO 14001", "ISO 45001"],
+    highlights: ["Core team", "tailow a program", "Training programme", "senior staff"],
+    color: "#BAC291"
   },
   {
-    id: "Training support",
-    title: "Training support",
-    subtitle: "Training support",
-    shortDesc: "We provide end-to-end support for technology selection and global sourcing, ensuring optimal equipment and process integration. We evaluate technologies against your specific requirements, conduct due diligence, and support procurement to guarantee seamless integration into your operations.",
+    id: "documentation",
+    title: "Manufacturing technology selection & global technology sourcings",
+    subtitle: "Structural Architecture",
+    shortDesc: "We provide end-to-end support for technology selection and global sourcing, ensuring optimal equipment and process integration.",
     fullDesc: "Our technology scouting and selection process ensures you acquire the best-in-class machinery and processing solutions from a global vendor base. We evaluate technologies against your specific requirements, conduct due diligence, and support procurement to guarantee seamless integration into your operations.",
     icon: <FileText className="w-12 h-12" />,
     img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=1200",
@@ -70,8 +69,8 @@ const services: Service[] = [
     color: "#BAC291"
   },
   {
-    id: "Documentation",
-    title: "Documentation and implementation support",
+    id: "certification support for food safety",
+    title: "Technical due diligence",
     subtitle: "Standards Fulfillment",
     shortDesc: "Final gap closure for FSSC 22000, BRC, ISO, and global safety markers.",
     fullDesc: "We perform comprehensive technical due diligence to validate business models, manufacturing processes, and growth strategies. Our assessments help investors and stakeholders make informed decisions by identifying risks, validating potential, and ensuring alignment with industry best practices.",
@@ -79,28 +78,6 @@ const services: Service[] = [
     img: "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&q=80&w=1200",
     highlights: ["GFSI benchmark standrs like BRC,IFS,FSSC 22000", "SQF fod food manufacturing,packging and storage", 'HACCP',"ISO 22000",'FAMI-QS','GMP'],
     standards: ["ISO 9001", "ISO 14001", "ISO 45001"],
-    color: "#BAC291"
-  },
-  {
-    id: "Internal",
-    title: "Internal audit support",
-    subtitle: "Vigilance & Surveillance",
-    shortDesc: "Strategic planning for scalability and optimal site selection.",
-    fullDesc: "We provide data-driven insights for capacity planning and plant location studies, helping you scale operations efficiently and select the most strategic locations for long-term success.",
-    icon: <ShieldCheck className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1574950578143-858c6fc58922?auto=format&fit=crop&q=80&w=1200",
-    highlights: ["BRC Global Standards for food safety", "We identify the autiors and training in internal auditing","Handholding audit cycle"],
-    color: "#BAC291"
-  },
-  {
-    id: "certification support for food safety",
-    title: "Certification support for food safety",
-    subtitle: "Certification support for food safety",
-    shortDesc: "We provide comprehensive support for achieving and maintaining food safety certifications, including HACCP, ISO 22000, BRC, FSSC 22000, IFS, SQF, FAMI-QS, and GMP. Our services include gap analysis, training, documentation, and certification application assistance to ensure compliance with global food safety standards.",
-    fullDesc: "We provide comprehensive support for achieving and maintaining food safety certifications, including HACCP, ISO 22000, BRC, FSSC 22000, IFS, SQF, FAMI-QS, and GMP. Our services include gap analysis, training, documentation, and certification application assistance to ensure compliance with global food safety standards.",
-    icon: <Award className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&q=80&w=1200",
-    highlights: ["GFSI benchmark standrs like BRC,IFS,FSSC 22000", "SQF fod food manufacturing,packging and storage", 'HACCP',"ISO 22000",'FAMI-QS','GMP'],
     color: "#BAC291"
   }
 ];
@@ -145,7 +122,7 @@ export default function TechnicalAdvisory() {
           >
             <span className="text-[#BAC291] font-black uppercase tracking-[0.4em] text-sm">Innovation in Industry</span>
             <h1 className="text-xl md:text-5xl font-black text-[#1A3013] uppercase leading-[0.8] tracking-tighter font-black">
-             Technical Advisory
+              Strategy & Technical Advisory
             </h1>
           </motion.div>
 
@@ -155,20 +132,7 @@ export default function TechnicalAdvisory() {
             transition={{ delay: 0.4 }}
             className="max-w-auto text-xl mt-10 md:text-2xl text-gray-600 leading-relaxed font-medium "
           >
-         •	Project feasibility studies and technical project report for various food sectors<br/>
-•	Food technology advisory – products, preservations, shelf life, equipment’s, packaging<br/>
-•	New product development support<br/>
-•	Process automation – traditional products, high volumes, better hygiene, productivity<br/>
-•	Sourcing and vendor development support – quality ingredients, packaging material<br/>
-•	Competence development, training – GMP, GHP and international food safety codes and standards<br/>
-•	Laying systems & procedures for prevailing Quality, Food safety, EHS international standards
-◦	Food safety, GFSI standards – HACCP, ISO 22000, BRC Food, FSSC 22000,<br/>
-◦	IFS, SQF, GMP+, FAMI QS<br/>
-◦	BRC Packaging / IFS Packaging<br/>
-◦	EHS – EMS, OSHAS, QMS,<br/>
-◦	Social Accountability, Sedex etc<br/>
-•	Customer specific requirements and COPs of various global retailers, QSRs including PepsiCo, Coke, Kellogs (KSQR), Tesco (TFMS), Unilever (URSA), Asda, Loblaws, M&S, TJ etc.
-
+          We help organisations de-risk manufacturing investments through rigorous, data-driven technical and commercial advisory. From evaluating opportunities to selecting the right technologies, we ensure every project begins with a sound strategic and engineering foundation.
           </motion.p>
         </section>
 
