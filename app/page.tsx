@@ -8,7 +8,7 @@ import dynamic from "next/dynamic";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
-import Preloader from "@/components/Preloader";
+// import Preloader from "@/components/Preloader";
 
 
 import TaglineIntro from "@/components/TaglineIntro";
@@ -64,7 +64,7 @@ function CounterItem({ target, suffix, label }: { target: number, suffix: string
 // --- Main Page ---
 
 export default function Home() {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(true); // Temporarily bypass preloader
   const heroScrollRef = useRef(null);
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
@@ -141,10 +141,10 @@ export default function Home() {
 
   return (
     <>
-      {/* Preloader */}
-      {!isLoaded && (
+      {/* Preloader - Temporarily disabled */}
+      {/* {!isLoaded && (
         <Preloader onComplete={() => setIsLoaded(true)} />
-      )}
+      )} */}
 
       <div 
         id="main-site-content" 
