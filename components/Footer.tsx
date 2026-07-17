@@ -58,7 +58,7 @@ export default function Footer() {
       >
         {/* Column 1: Intro & Contact */}
         <motion.div className="flex flex-col gap-4" variants={itemVariants}>
-          <div className="text-[#1a1a1a] mb-2 tracking-tight"><img src='/Logo.png' style={{ width: 'auto', height: '120px' }} /></div>
+          <div className="text-[#1a1a1a] mb-2 tracking-tight"><img src='/Logo.png' alt="Paradigm Logo" style={{ width: 'auto', height: '120px' }} /></div>
           
           <div className="flex items-start gap-4 mb-2 group">
             <span className="text-gray-600 mt-1 shrink-0"><MapPinIcon /></span>

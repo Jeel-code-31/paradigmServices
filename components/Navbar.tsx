@@ -7,6 +7,43 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, ChevronDown, MessageSquare } from 'lucide-react';
 
+const whatwedo = [
+  { name: 'Technical Advisory', href: '/what-we-do/technical' },
+  { name: 'Regular Advisory', href: '/what-we-do/regular' },
+  { name: 'Engineering Advisory', href: '/what-we-do/Engiee' },
+  { name: 'Project Management', href: '/what-we-do/project' },
+  { name: 'Operational Excellence', href: '/what-we-do/op' },
+];
+
+const ourServices = [
+  { name: 'Strategy & Technical', href: '/our-service/technical&stratergy' },
+  { name: 'EPCM Solutions', href: '/our-service/EPCM-solution' },
+  { name: 'Food Safety', href: '/our-service/Food-safety' },
+  { name: 'Legal Advisory', href: '/our-service/legal-advisory' },
+  { name: 'Smart Manufacturing', href: '/our-service/smrt-manufacturing' },
+];
+
+const aboutLinks = [
+  { name: 'About Us', href: '/about-us' },
+  { name: 'Value & Mission', href: '/about-us/value' },
+  { name: 'Our Team', href: '/about-us/team' },
+];
+
+const navLinks = [
+  { name: 'Why Us?', href: '/why-us' },
+  { name: 'Our Work', href: '/our-work' },
+  { name: 'Our Clients', href: '/clientele' },
+];
+
+const allPages = [
+  ...aboutLinks,
+  ...whatwedo,
+  ...ourServices,
+  ...navLinks,
+  { name: 'Home', href: '/' },
+  { name: 'Contact Us', href: '/contact-us' }
+];
+
 export default function Navbar() {
   const pathname = usePathname();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -15,43 +52,6 @@ export default function Navbar() {
   const [filteredResults, setFilteredResults] = useState<{ name: string; href: string }[]>([]);
   const [isScrolled, setIsScrolled] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
-
-  const whatwedo = [
-    { name: 'Technical Advisory', href: '/what-we-do/technical' },
-    { name: 'Regular Advisory', href: '/what-we-do/regular' },
-    { name: 'Engineering Advisory', href: '/what-we-do/Engiee' },
-    { name: 'Project Management', href: '/what-we-do/project' },
-    { name: 'Operational Excellence', href: '/what-we-do/op' },
-  ];
-
-  const ourServices = [
-    { name: 'Strategy & Technical', href: '/our-service/technical&stratergy' },
-    { name: 'EPCM Solutions', href: '/our-service/EPCM-solution' },
-    { name: 'Food Safety', href: '/our-service/Food-safety' },
-    { name: 'Legal Advisory', href: '/our-service/legal-advisory' },
-    { name: 'Smart Manufacturing', href: '/our-service/smrt-manufacturing' },
-  ];
-
-  const aboutLinks = [
-    { name: 'About Us', href: '/about-us' },
-    { name: 'Value & Mission', href: '/about-us/value' },
-    { name: 'Our Team', href: '/about-us/team' },
-  ];
-
-  const navLinks = [
-    { name: 'Why Us?', href: '/why-us' },
-    { name: 'Our Work', href: '/our-work' },
-    { name: 'Our Clients', href: '/clientele' },
-  ];
-
-  const allPages = [
-    ...aboutLinks,
-    ...whatwedo,
-    ...ourServices,
-    ...navLinks,
-    { name: 'Home', href: '/' },
-    { name: 'Contact Us', href: '/contact-us' }
-  ];
 
   const isAboutActive = aboutLinks.some(link => pathname === link.href);
   const isWhatWeDoActive = whatwedo.some(link => pathname === link.href);
