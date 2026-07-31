@@ -41,7 +41,7 @@ const services: Service[] = [
       </>
     ),
     icon: <Building2 className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=1200",
+    img: "/img1.png",
     highlights: ["Review of fabrication drawing as per data sheet/ P& ID's", "update P&ID's with GA Drawings provided by the vendors", "updating of equipment layout with fabrication drawings/GA drawings provided by the vendors"],
     color: "#BAC291"
   },
@@ -120,7 +120,7 @@ const services: Service[] = [
       </>
     ),
     icon: <HardHat className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1503387762-592dea58ef21?auto=format&fit=crop&q=80&w=1200",
+    img: "/img2.png",
     highlights: ["Construction Supervision", "Vendor Inspection", "Timeline Management", "Commissioning Support"],
     color: "#BAC291"
   },
@@ -145,12 +145,12 @@ const services: Service[] = [
       </>
     ),
     icon: <HardHat className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1503387762-592dea58ef21?auto=format&fit=crop&q=80&w=1200",
+    img: "/img3.png",
     highlights: ["Construction Supervision", "Vendor Inspection", "Timeline Management", "Commissioning Support"],
     color: "#BAC291"
   },
   {
-    id: "EE",
+    id: "Eh",
     title: "Food defence & food fraud mitigation",
     subtitle: "Enquiry to Commissioning",
     shortDesc: "Understand safety zoning Requirements and efficient design of electrical.....",
@@ -168,7 +168,7 @@ const services: Service[] = [
       </>
     ),
     icon: <HardHat className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1503387762-592dea58ef21?auto=format&fit=crop&q=80&w=1200",
+    img: "/img4.png",
     highlights: ["Construction Supervision", "Vendor Inspection", "Timeline Management", "Commissioning Support"],
     color: "#BAC291"
   },
@@ -188,7 +188,7 @@ const services: Service[] = [
       </>
     ),
     icon: <HardHat className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1503387762-592dea58ef21?auto=format&fit=crop&q=80&w=1200",
+    img: "/img4.png",
     highlights: ["Emergency", "Specific Equipments & istruments", "Detailed bill of material"],
     color: "#BAC291"
   },
@@ -211,7 +211,7 @@ const services: Service[] = [
       </>
     ),
     icon: <HardHat className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1503387762-592dea58ef21?auto=format&fit=crop&q=80&w=1200",
+    img: "/img5.png",
     highlights: ["Construction Supervision", "Vendor Inspection", "Timeline Management", "Commissioning Support"],
     color: "#BAC291"
   }

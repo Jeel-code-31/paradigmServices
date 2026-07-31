@@ -41,7 +41,7 @@ const services: Service[] = [
       </>
     ),
     icon: <Building2 className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=1200",
+    img: "/img8.png",
     highlights: ["Craftsmen welders, mechanical fitters", ' pipe fitters and instrument fitters', "Special tools and with equipments kit"],
     color: "#BAC291"
   },
@@ -60,7 +60,7 @@ const services: Service[] = [
       </>
     ),
     icon: <Wind className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1200",
+    img: "/img9.png",
     highlights: ["Bond Between Contractor and Client", "On-line Supervision", "Bill Certifictions", "Safety and other specific requirements"],
     color: "#BAC291"
   },
@@ -83,7 +83,7 @@ const services: Service[] = [
       </>
     ),
     icon: <Drill className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200",
+    img: "/img10.png",
     highlights: [],
     color: "#BAC291"
   },
@@ -106,7 +106,7 @@ const services: Service[] = [
       </>
     ),
     icon: <HardHat className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1503387762-592dea58ef21?auto=format&fit=crop&q=80&w=1200",
+    img: "/img7.png",
     highlights: ["Emergency", "Specific Equipments & istruments", "Detailed bill of material"],
     color: "#BAC291"
   }

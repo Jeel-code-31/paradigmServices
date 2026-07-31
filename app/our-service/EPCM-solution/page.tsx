@@ -32,7 +32,7 @@ const services: Service[] = [
     shortDesc: "Detailed architectural plans and structural design for industrial facilities.",
     fullDesc: "We provide comprehensive industrial architecture and civil-structural engineering services. Our team creates optimized layouts, performs structural analysis, and prepares complete civil construction drawings to ensure safety, functionality, and compliance with local regulations.",
     icon: <Building2 className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1521791136064-7986c2959d43?auto=format&fit=crop&q=80&w=1200",
+    img: "/img6.png",
     highlights: [
       "Space utilization & GMP zoning",
       "Structural load and foundation analysis",
@@ -48,7 +48,7 @@ const services: Service[] = [
     shortDesc: "Process flow sheets, equipment sizing, and pipeline layout design.",
     fullDesc: "Our process engineering services cover the creation of Process Flow Diagrams (PFDs), Equipment Layouts, and detailed Piping & Instrumentation Diagrams (P&IDs). We calculate precise sizing requirements for process machinery and utilities to ensure high performance and safety.",
     icon: <Cog className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1526304640581-d4a8ef0b3296?auto=format&fit=crop&q=80&w=1200",
+    img: "/img7.png",
     highlights: [
       "Process Flow Diagrams (PFDs) design",
       "Piping & Instrumentation Diagrams (P&IDs)",
@@ -64,7 +64,7 @@ const services: Service[] = [
     shortDesc: "Clean utility design, MEP routing, HVAC systems, and loss prevention.",
     fullDesc: "We design robust utility and mechanical, electrical, and plumbing (MEP) systems, including cleanrooms, HVAC systems, water/steam distribution, electrical cabling, substations, and comprehensive fire safety hydrant systems tailored for industrial settings.",
     icon: <Wind className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1526304640581-d4a8ef0b3296?auto=format&fit=crop&q=80&w=1200",
+    img: "/img8.png",
     highlights: [
       "Cleanroom HVAC and air classification design",
       "Utilities routing (water, steam, compressed air)",
@@ -80,7 +80,7 @@ const services: Service[] = [
     shortDesc: "PLC, SCADA, DCS configuration, instrumentation, and control loops.",
     fullDesc: "We offer automation engineering to bring intelligence and real-time control to your factory. From selecting field instruments to programming PLCs and SCADA networks, we ensure seamless data integration and control loop implementation for optimal operations.",
     icon: <Cpu className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1526304640581-d4a8ef0b3296?auto=format&fit=crop&q=80&w=1200",
+    img: "/img9.png",
     highlights: [
       "Instrument specifications & I/O lists",
       "SCADA, PLC, and DCS integration",
@@ -96,7 +96,7 @@ const services: Service[] = [
     shortDesc: "Complete lifecycle management from concept design to commercial run.",
     fullDesc: "Our EPCM team coordinates all phases of greenfield and brownfield projects, managing engineering design, equipment procurement, vendor selection, project scheduling, and on-site execution to deliver facilities on time and within budget.",
     icon: <Construction className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1526304640581-d4a8ef0b3296?auto=format&fit=crop&q=80&w=1200",
+    img: "/img10.png",
     highlights: [
       "Turnkey execution oversight",
       "Master project scheduling & CPM tracking",
@@ -112,7 +112,7 @@ const services: Service[] = [
     shortDesc: "Supervision, budgeting, bill certification, and timeline monitoring.",
     fullDesc: "We act as independent project managers to protect our client's interests. We oversee contractors, verify progress billings, run site status meetings, resolve engineering clashes, and ensure that construction strictly follows quality guidelines.",
     icon: <Target className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1526304640581-d4a8ef0b3296?auto=format&fit=crop&q=80&w=1200",
+    img: "/img11.png",
     highlights: [
       "Contractor coordination & site scheduling",
       "Progress bill verification & auditing",
@@ -128,7 +128,7 @@ const services: Service[] = [
     shortDesc: "Trial runs, safety interlock checks, and operational handholding.",
     fullDesc: "We provide on-site commissioning support to transition the facility to commercial operations. We manage equipment trials, run dry and wet tests, configure safety interlocks, train factory staff, and deliver standard operating procedures (SOPs).",
     icon: <ClipboardCheck className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1526304640581-d4a8ef0b3296?auto=format&fit=crop&q=80&w=1200",
+    img: "/img12.png",
     highlights: [
       "Pre-commissioning dry & wet trial runs",
       "Safety interlocks & emergency shutdown checks",

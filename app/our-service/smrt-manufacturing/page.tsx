@@ -44,7 +44,7 @@ const services: Service[] = [
       </>
     ),
     icon: <Landmark className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1521791136064-7986c2959d43?auto=format&fit=crop&q=80&w=1200",
+    img: "/process-streamlining.png",
     highlights: ["Preparation of FSMS plans and recall and traceablity plans", "Alignement with properietary food definitions", "Labelling,Packaging and legal metrology", "Preparation of Representations to FSSAI"],
     color: "#BAC291"
   },
@@ -55,7 +55,7 @@ const services: Service[] = [
     shortDesc: "World Class Manufacturing (WCM) is a philosophy that focuses on continuous improvement in all aspects of manufacturing. It is a holistic approach that involves the entire organization, from top management to front-line employees, in the pursuit of excellence.",
     fullDesc: "our Experience working with Automobile, IT Sectors, Telll us that food processing industry requires a culture change. We have amalgamentd the tools to crease unique approches for various segments of factories to get desired the outcomes as we know.",
     icon: <Globe className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1526304640581-d4a8ef0b3296?auto=format&fit=crop&q=80&w=1200",
+    img: "/wcm-manufacturing.png",
     highlights: ["Foregin supplier Verification programme", "PCQI(Preventive Control Qualified Individual) Training", "TACCP(Threat assessment and critical control point)", "Infrastructure Zoning"],
     color: "#BAC291"
   },
@@ -66,7 +66,7 @@ const services: Service[] = [
     shortDesc: "World Class Manufacturing (WCM) is a philosophy that focuses on continuous improvement in all aspects of manufacturing. It is a holistic approach that involves the entire organization, from top management to front-line employees, in the pursuit of excellence.",
     fullDesc: "In Lean six Sigma Approch, We do solve focused problem by graduating people to challenge organization problems and create continous improvment culture following are the outcomes",
     icon: <Globe className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1526304640581-d4a8ef0b3296?auto=format&fit=crop&q=80&w=1200",
+    img: "/lean-six-sigma.png",
     highlights: ["Foregin supplier Verification programme", "PCQI(Preventive Control Qualified Individual) Training", "TACCP(Threat assessment and critical control point)", "Infrastructure Zoning"],
     color: "#BAC291"
   },
@@ -77,7 +77,7 @@ const services: Service[] = [
     shortDesc: "Maximizing material efficiency, reducing waste, and streamlining operational costs.",
     fullDesc: "We implement advanced yield management strategies and structured waste elimination audits. Our specialists identify raw material loss points, optimize resource usage, and establish cost monitoring systems to directly improve bottom-line margins.",
     icon: <TrendingUp className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1526304640581-d4a8ef0b3296?auto=format&fit=crop&q=80&w=1200",
+    img: "/yield-waste-optimization.png",
     highlights: [
       "Raw material yield optimization",
       "Structured waste (Muda) elimination",
@@ -93,7 +93,7 @@ const services: Service[] = [
     shortDesc: "Integrating IoT, ERP interfaces, and AI-enabled diagnostics for real-time operations.",
     fullDesc: "We guide factories through digital transformation. By integrating ERP databases with shop-floor IoT sensors, building real-time dashboards, and deploying AI diagnostics, we enable predictive maintenance and data-driven decision-making.",
     icon: <Cpu className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1526304640581-d4a8ef0b3296?auto=format&fit=crop&q=80&w=1200",
+    img: "/digital-factory-iot.png",
     highlights: [
       "Real-time operational dashboards",
       "ERP and shop floor database bridging",
@@ -109,7 +109,7 @@ const services: Service[] = [
     shortDesc: "Optimizing inventory levels, supplier reliability, and logistics networks.",
     fullDesc: "We analyze and optimize supply chains from raw materials to customer delivery. Our services include inventory control modeling, warehouse space planning, logistics network optimization, and vendor performance audits to ensure maximum reliability and lower holding costs.",
     icon: <Globe className="w-12 h-12" />,
-    img: "https://images.unsplash.com/photo-1526304640581-d4a8ef0b3296?auto=format&fit=crop&q=80&w=1200",
+    img: "/supply-chain-logistics.png",
     highlights: [
       "Inventory optimization & safety stock modeling",
       "Warehouse layout & space optimization",
